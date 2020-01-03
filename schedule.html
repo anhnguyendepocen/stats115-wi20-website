@@ -1,0 +1,676 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stats 115</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <!-- add after bootstrap.min.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+    />
+    <!-- add after bootstrap.min.js -->
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+    <link rel="stylesheet" href="course-styles.css">
+
+    <script src="https://kit.fontawesome.com/4145f6a1ca.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148347432-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-148347432-1');
+    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#toc">
+
+
+    <nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand navbar-text" href="#">Stats 115 - UC Irvine - Winter 2020</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" >    <i class="fas fa-bars" style="color:##000000; font-size:28px;"></i>
+</span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"> <a class ="nav-link" href="main.html">Home</a></li>
+        <li class="nav-item"> <a class ="nav-link" href="policies.html">Policies</a></li>
+        <li class="nav-item"> <a class ="nav-link" href="tools.html">Tools</a></li>
+        <li class="nav-item"> <a class ="nav-link" href="schedule.html">Schedule</a></li>
+        <li class="nav-item"> <a class ="nav-link" href="opp.html">Opportunities</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+    <div class = "main-text">
+      <div class="container">
+        <div class="row">
+          <!-- sidebar, which will move to the top on a small screen -->
+          <div class="col-sm-3">
+            <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+          </div>
+          <!-- main content area -->
+          <div class="col-sm-9">
+          </div>
+        </div>
+      </div>
+
+      <div class = "main-text">
+            <b>Note:</b> This is a tentative schedule. The exam dates are set but
+            the rest (slides, homework assignments etc. ) will be posted as we go along.
+            </thead>
+            <br>
+            <br>
+            <table class="table table-condensed table-striped">
+              <thead>
+
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td align = "center" colspan="5" class ="border">In Class</td>
+                  <td>After Class</td>
+                  <td></td>
+
+
+                </tr>
+                <tr>
+
+                <td> Week</td>
+                <td> Date</td>
+                <td> Lesson</td>
+                <td> Objectives</td>
+                <td> Quizzes</td>
+                <td> Slides</td>
+                <td> Handouts</td>
+                <td> Code</td>
+                <td> Homework</td>
+                <td> Exams</td>
+              </tr>
+              </thead>
+
+            <tbody>
+              <tr>
+                   <td align="left">1</td>
+                   <td align="left">Mon, Jan 6</td>
+                   <td align="left">Introduction to Bayesian Statistics</td>
+                   <td align="center"><font color = "#cbcbcb">
+                     <i class="fas fa-bullseye fa-lg"></i></font></td>
+                   <td align="center"> <font color = "#cbcbcb">
+                     <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                   <td align="center"> <font color = "#cbcbcb">
+                     <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                   <td align="center"> <font color = "#cbcbcb">
+                     <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                   <td align="center"> <font color = "#cbcbcb">
+                     <i class="fab fa-r-project fa-lg"></i></font> </td>
+                     <td align="center"> <font color = "#cbcbcb">
+                       <i class="fas fa-laptop fa-lg"></i></font> </td>
+                   <td align="center"> <font color = "#cbcbcb">
+                     <i class="fas fa-edit fa-lg"></i></font> </td>
+                 </tr>
+
+                <tr>
+                      <td align="left"></td>
+                      <td align="left">Wed, Jan 8</td>
+                      <td align="left">Probability Review</td>
+                      <td align="center"><font color = "#cbcbcb">
+                        <i class="fas fa-bullseye fa-lg"></i></font></td>
+                      <td align="center"> <font color = "#cbcbcb">
+                        <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                      <td align="center"> <font color = "#cbcbcb">
+                        <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                      <td align="center"> <font color = "#cbcbcb">
+                        <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                      <td align="center"> <font color = "#cbcbcb">
+                        <i class="fab fa-r-project fa-lg"></i></font> </td>
+                        <td align="center"> <font color = "#cbcbcb">
+                          <i class="fas fa-laptop fa-lg"></i></font> </td>
+                      <td align="center"> <font color = "#cbcbcb">
+                        <i class="fas fa-edit fa-lg"></i></font> </td>
+                  </tr>
+
+                  <tr>
+                         <td align="left"></td>
+                         <td align="left">Wed, Jan 8</td>
+                         <td align="left">Probability Review in R</td>
+                         <td align="center"><font color = "#cbcbcb">
+                           <i class="fas fa-bullseye fa-lg"></i></font></td>
+                         <td align="center"> <font color = "#cbcbcb">
+                           <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                         <td align="center"> <font color = "#cbcbcb">
+                           <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                         <td align="center"> <font color = "#cbcbcb">
+                           <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                         <td align="center"> <font color = "#cbcbcb">
+                           <i class="fab fa-r-project fa-lg"></i></font> </td>
+                           <td align="center"> <font color = "#cbcbcb">
+                             <i class="fas fa-laptop fa-lg"></i></font> </td>
+                         <td align="center"> <font color = "#cbcbcb">
+                           <i class="fas fa-edit fa-lg"></i></font> </td>
+                    </tr>
+
+                    <tr>
+                            <td align="left">2</td>
+                            <td align="left">Mon, Jan 13</td>
+                            <td align="left"></td>
+                            <td align="center"><font color = "#cbcbcb">
+                              <i class="fas fa-bullseye fa-lg"></i></font></td>
+                            <td align="center"> <font color = "#cbcbcb">
+                              <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                            <td align="center"> <font color = "#cbcbcb">
+                              <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                            <td align="center"> <font color = "#cbcbcb">
+                              <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                            <td align="center"> <font color = "#cbcbcb">
+                              <i class="fab fa-r-project fa-lg"></i></font> </td>
+                              <td align="center"> <font color = "#cbcbcb">
+                                <i class="fas fa-laptop fa-lg"></i></font> </td>
+                            <td align="center"> <font color = "#cbcbcb">
+                              <i class="fas fa-edit fa-lg"></i></font> </td>
+                      </tr>
+                      <tr>
+                               <td align="left"></td>
+                               <td align="left">Wed, Jan 15</td>
+                               <td align="left"></td>
+                               <td align="center"><font color = "#cbcbcb">
+                                 <i class="fas fa-bullseye fa-lg"></i></font></td>
+                               <td align="center"> <font color = "#cbcbcb">
+                                 <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                               <td align="center"> <font color = "#cbcbcb">
+                                 <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                               <td align="center"> <font color = "#cbcbcb">
+                                 <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                               <td align="center"> <font color = "#cbcbcb">
+                                 <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                 <td align="center"> <font color = "#cbcbcb">
+                                   <i class="fas fa-laptop fa-lg"></i></font> </td>
+                               <td align="center"> <font color = "#cbcbcb">
+                                 <i class="fas fa-edit fa-lg"></i></font> </td>
+                          </tr>
+                          <tr>
+                                  <td align="left"></td>
+                                  <td align="left">Wed, Jan 15</td>
+                                  <td align="left"></td>
+                                  <td align="center"><font color = "#cbcbcb">
+                                    <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                  <td align="center"> <font color = "#cbcbcb">
+                                    <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                  <td align="center"> <font color = "#cbcbcb">
+                                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                  <td align="center"> <font color = "#cbcbcb">
+                                    <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                  <td align="center"> <font color = "#cbcbcb">
+                                    <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                    <td align="center"> <font color = "#cbcbcb">
+                                      <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                  <td align="center"> <font color = "#cbcbcb">
+                                    <i class="fas fa-edit fa-lg"></i></font> </td>
+                            </tr>
+
+
+                          <tr>
+                               <td align="left">3</td>
+                               <td align="left">Mon, Jan 20</td>
+                               <td align="center" colspan = "8"> No class - Dr. Martin Luther King, Jr. Day</td>
+
+                             </tr>
+                             <tr>
+                                  <td align="left"></td>
+                                  <td align="left">Wed, Jan 22</td>
+                                  <td align="left"></td>
+                                  <td align="center"><font color = "#cbcbcb">
+                                    <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                  <td align="center"> <font color = "#cbcbcb">
+                                    <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                  <td align="center"> <font color = "#cbcbcb">
+                                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                  <td align="center"> <font color = "#cbcbcb">
+                                    <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                  <td align="center"> <font color = "#cbcbcb">
+                                    <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                    <td align="center"> <font color = "#cbcbcb">
+                                      <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                  <td align="center"> <font color = "#cbcbcb">
+                                    <i class="fas fa-edit fa-lg"></i></font> </td>
+                                </tr>
+                                <tr>
+                                     <td align="left"></td>
+                                     <td align="left">Wed, Jan 22</td>
+                                     <td align="left"></td>
+                                     <td align="center"><font color = "#cbcbcb">
+                                       <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                     <td align="center"> <font color = "#cbcbcb">
+                                       <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                     <td align="center"> <font color = "#cbcbcb">
+                                       <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                     <td align="center"> <font color = "#cbcbcb">
+                                       <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                     <td align="center"> <font color = "#cbcbcb">
+                                       <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                       <td align="center"> <font color = "#cbcbcb">
+                                         <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                     <td align="center"> <font color = "#cbcbcb">
+                                       <i class="fas fa-edit fa-lg"></i></font> </td>
+                                  </tr>
+
+                                  <tr>
+                                       <td align="left">4</td>
+                                       <td align="left">Mon, Jan 27</td>
+                                       <td align="left"></td>
+                                       <td align="center"><font color = "#cbcbcb">
+                                         <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                       <td align="center"> <font color = "#cbcbcb">
+                                         <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                       <td align="center"> <font color = "#cbcbcb">
+                                         <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                       <td align="center"> <font color = "#cbcbcb">
+                                         <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                       <td align="center"> <font color = "#cbcbcb">
+                                         <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                         <td align="center"> <font color = "#cbcbcb">
+                                           <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                       <td align="center"> <font color = "#cbcbcb">
+                                         <i class="fas fa-edit fa-lg"></i></font> </td>
+                                    </tr>
+                                    <tr>
+                                         <td align="left"></td>
+                                         <td align="left">Wed, Jan 29</td>
+                                         <td align="left"></td>
+                                         <td align="center"><font color = "#cbcbcb">
+                                           <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                         <td align="center"> <font color = "#cbcbcb">
+                                           <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                         <td align="center"> <font color = "#cbcbcb">
+                                           <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                         <td align="center"> <font color = "#cbcbcb">
+                                           <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                         <td align="center"> <font color = "#cbcbcb">
+                                           <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                           <td align="center"> <font color = "#cbcbcb">
+                                             <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                         <td align="center"> <font color = "#cbcbcb">
+                                           <i class="fas fa-edit fa-lg"></i></font> </td>
+                                      </tr>
+
+                                      <tr>
+                                           <td align="left">5</td>
+                                           <td align="left">Mon, Feb 3</td>
+                                           <td align="left"></td>
+                                           <td align="center"><font color = "#cbcbcb">
+                                             <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                           <td align="center"> <font color = "#cbcbcb">
+                                             <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                           <td align="center"> <font color = "#cbcbcb">
+                                             <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                           <td align="center"> <font color = "#cbcbcb">
+                                             <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                           <td align="center"> <font color = "#cbcbcb">
+                                             <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                             <td align="center"> <font color = "#cbcbcb">
+                                               <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                           <td align="center"> <font color = "#cbcbcb">
+                                             <i class="fas fa-edit fa-lg"></i></font> </td>
+                                        </tr>
+                                        <tr>
+                                             <td align="left"></td>
+                                             <td align="left">Wed, Feb 5</td>
+                                             <td align="left"></td>
+                                             <td align="center"><font color = "#cbcbcb">
+                                               <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                             <td align="center"> <font color = "#cbcbcb">
+                                               <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                             <td align="center"> <font color = "#cbcbcb">
+                                               <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                             <td align="center"> <font color = "#cbcbcb">
+                                               <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                             <td align="center"> <font color = "#cbcbcb">
+                                               <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                               <td align="center"> <font color = "#cbcbcb">
+                                                 <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                             <td align="center"> <font color = "#cbcbcb">
+                                               <i class="fas fa-edit fa-lg"></i></font> </td>
+                                          </tr>
+                                          <tr>
+                                               <td align="left"></td>
+                                               <td align="left">Wed, Feb 5</td>
+                                               <td align="left"></td>
+                                               <td align="center"><font color = "#cbcbcb">
+                                                 <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                               <td align="center"> <font color = "#cbcbcb">
+                                                 <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                               <td align="center"> <font color = "#cbcbcb">
+                                                 <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                               <td align="center"> <font color = "#cbcbcb">
+                                                 <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                               <td align="center"> <font color = "#cbcbcb">
+                                                 <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                 <td align="center"> <font color = "#cbcbcb">
+                                                   <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                               <td align="center"> <font color = "#cbcbcb">
+                                                 <i class="fas fa-edit fa-lg"></i></font> </td>
+                                            </tr>
+                                            <tr>
+                                                 <td align="left">6</td>
+                                                 <td align="left">Mon. Feb 10</td>
+                                                 <td align="left">Midterm</td>
+                                                 <td align="center"><font color = "#cbcbcb">
+                                                   <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                 <td align="center"> <font color = "#cbcbcb">
+                                                   <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                 <td align="center"> <font color = "#cbcbcb">
+                                                   <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                 <td align="center"> <font color = "#cbcbcb">
+                                                   <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                 <td align="center"> <font color = "#cbcbcb">
+                                                   <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                   <td align="center"> <font color = "#cbcbcb">
+                                                     <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                 <td align="center">
+                                                   <i class="fas fa-edit fa-lg"></i> </td>
+                                              </tr>
+                                              <tr>
+                                                   <td align="left"></td>
+                                                   <td align="left">Wed, Feb 12</td>
+                                                   <td align="left"></td>
+                                                   <td align="center"><font color = "#cbcbcb">
+                                                     <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                   <td align="center"> <font color = "#cbcbcb">
+                                                     <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                   <td align="center"> <font color = "#cbcbcb">
+                                                     <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                   <td align="center"> <font color = "#cbcbcb">
+                                                     <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                   <td align="center"> <font color = "#cbcbcb">
+                                                     <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                     <td align="center"> <font color = "#cbcbcb">
+                                                       <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                   <td align="center"> <font color = "#cbcbcb">
+                                                     <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                </tr>
+                                                <tr>
+                                                     <td align="left"></td>
+                                                     <td align="left">Wed, Feb 12</td>
+                                                     <td align="left"></td>
+                                                     <td align="center"><font color = "#cbcbcb">
+                                                       <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                     <td align="center"> <font color = "#cbcbcb">
+                                                       <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                     <td align="center"> <font color = "#cbcbcb">
+                                                       <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                     <td align="center"> <font color = "#cbcbcb">
+                                                       <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                     <td align="center"> <font color = "#cbcbcb">
+                                                       <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                       <td align="center"> <font color = "#cbcbcb">
+                                                         <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                     <td align="center"> <font color = "#cbcbcb">
+                                                       <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                  </tr>
+                                                  <tr>
+                                                     <td align="left">7</td>
+                                                     <td align="left">Mon, Feb 17</td>
+                                                     <td align="center" colspan = "8"> No class - Presidents' Day</td>
+                                                    </tr>
+                                                    <tr>
+                                                       <td align="left"></td>
+                                                       <td align="left">Wed, Feb 19</td>
+                                                       <td align="left"></td>
+                                                       <td align="center"><font color = "#cbcbcb">
+                                                         <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                       <td align="center"> <font color = "#cbcbcb">
+                                                         <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                       <td align="center"> <font color = "#cbcbcb">
+                                                         <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                       <td align="center"> <font color = "#cbcbcb">
+                                                         <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                       <td align="center"> <font color = "#cbcbcb">
+                                                         <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                         <td align="center"> <font color = "#cbcbcb">
+                                                           <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                       <td align="center"> <font color = "#cbcbcb">
+                                                         <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                      </tr>
+                                                      <tr>
+                                                           <td align="left"></td>
+                                                           <td align="left">Wed, Feb 19</td>
+                                                           <td align="left"></td>
+                                                           <td align="center"><font color = "#cbcbcb">
+                                                             <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                             <td align="center"> <font color = "#cbcbcb">
+                                                               <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                        </tr>
+                                                        <tr>
+                                                         <td align="left">8</td>
+                                                         <td align="left">Mon, Feb 24</td>
+                                                         <td align="left"></td>
+                                                         <td align="center"><font color = "#cbcbcb">
+                                                           <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                         <td align="center"> <font color = "#cbcbcb">
+                                                           <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                         <td align="center"> <font color = "#cbcbcb">
+                                                           <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                         <td align="center"> <font color = "#cbcbcb">
+                                                           <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                         <td align="center"> <font color = "#cbcbcb">
+                                                           <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                         <td align="center"> <font color = "#cbcbcb">
+                                                           <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                          </tr>
+                                                          <tr>
+                                                           <td align="left"></td>
+                                                           <td align="left">Wed, Feb 26</td>
+                                                           <td align="left"></td>
+                                                           <td align="center"><font color = "#cbcbcb">
+                                                             <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                             <td align="center"> <font color = "#cbcbcb">
+                                                               <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                           <td align="center"> <font color = "#cbcbcb">
+                                                             <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                            </tr>
+                                                            <tr>
+                                                             <td align="left"></td>
+                                                             <td align="left">Wed, Feb 26</td>
+                                                             <td align="left"></td>
+                                                             <td align="center"><font color = "#cbcbcb">
+                                                               <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                             <td align="center"> <font color = "#cbcbcb">
+                                                               <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                             <td align="center"> <font color = "#cbcbcb">
+                                                               <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                             <td align="center"> <font color = "#cbcbcb">
+                                                               <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                             <td align="center"> <font color = "#cbcbcb">
+                                                               <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                             <td align="center"> <font color = "#cbcbcb">
+                                                               <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                              </tr>
+                                                              <tr>
+                                                               <td align="left">9</td>
+                                                               <td align="left">Mon, Mar 2</td>
+                                                               <td align="left"></td>
+                                                               <td align="center"><font color = "#cbcbcb">
+                                                                 <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                                </tr>
+                                                              <tr>
+                                                               <td align="left"></td>
+                                                               <td align="left">Wed, Mar 4</td>
+                                                               <td align="left"></td>
+                                                               <td align="center"><font color = "#cbcbcb">
+                                                                 <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                               <td align="center"> <font color = "#cbcbcb">
+                                                                 <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                                </tr>
+                                                                <tr>
+                                                                 <td align="left"></td>
+                                                                 <td align="left">Wed, Mar 4</td>
+                                                                 <td align="left"></td>
+                                                                 <td align="center"><font color = "#cbcbcb">
+                                                                   <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                                   <td align="center"> <font color = "#cbcbcb">
+                                                                     <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                                  </tr>
+                                                                <tr>
+                                                                 <td align="left">10</td>
+                                                                 <td align="left">Mon, Mar 9</td>
+                                                                 <td align="left"></td>
+                                                                 <td align="center"><font color = "#cbcbcb">
+                                                                   <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                                   <td align="center"> <font color = "#cbcbcb">
+                                                                     <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                                 <td align="center"> <font color = "#cbcbcb">
+                                                                   <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                   <td align="left"></td>
+                                                                   <td align="left">Wed, Mar 11</td>
+                                                                   <td align="left"></td>
+                                                                   <td align="center"><font color = "#cbcbcb">
+                                                                     <i class="fas fa-bullseye fa-lg"></i></font></td>
+                                                                   <td align="center"> <font color = "#cbcbcb">
+                                                                     <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                                   <td align="center"> <font color = "#cbcbcb">
+                                                                     <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                                   <td align="center"> <font color = "#cbcbcb">
+                                                                     <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                                   <td align="center"> <font color = "#cbcbcb">
+                                                                     <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                                     <td align="center"> <font color = "#cbcbcb">
+                                                                       <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                                   <td align="center"> <font color = "#cbcbcb">
+                                                                     <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                     <td align="left"></td>
+                                                                     <td align="left">Wed, Mar 11</td>
+                                                                     <td align="left"></td>
+                                                                     <td align="center"><font color = "#cbcbcb">
+                                                                       <i class="fas fa-bullseye fa-lg"></i></font></td>
+
+                                                                       <td align="center"> <font color = "#cbcbcb">
+                                                                         <i class="fas fa-question-circle fa-lg"></i></font> </td>
+                                                                     <td align="center"> <font color = "#cbcbcb">
+                                                                       <i class="fas fa-chalkboard-teacher fa-lg"></i></font> </td>
+                                                                     <td align="center"> <font color = "#cbcbcb">
+                                                                       <i class="fas fa-sticky-note fa-lg"></i></font> </td>
+                                                                     <td align="center"> <font color = "#cbcbcb">
+                                                                       <i class="fab fa-r-project fa-lg"></i></font> </td>
+                                                                       <td align="center"> <font color = "#cbcbcb">
+                                                                         <i class="fas fa-laptop fa-lg"></i></font> </td>
+                                                                     <td align="center"> <font color = "#cbcbcb">
+                                                                       <i class="fas fa-edit fa-lg"></i></font> </td>
+                                                                      </tr>
+                                                                    <tr>
+                                                                     <td align="left">11</td>
+                                                                     <td align="left" colspan="8">Wed, Mar 18, 8:00 - 10:00 am, Final Exam</td>
+
+                                                                     <td align="center">
+                                                                       <i class="fas fa-edit fa-lg"></i> </td>
+                                                                      </tr>
+
+
+
+
+
+
+
+
+
+
+</tbody>
+</table>
+
+
+    </div> <!--main-text-->
+
+
+    <footer>
+
+    Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.
+
+
+    </footer>
+
+  </body>
+</html>

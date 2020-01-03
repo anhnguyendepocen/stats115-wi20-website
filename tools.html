@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stats 115</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <!-- add after bootstrap.min.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+    />
+    <!-- add after bootstrap.min.js -->
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+    <link rel="stylesheet" href="course-styles.css">
+
+    <script src="https://kit.fontawesome.com/4145f6a1ca.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148347432-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-148347432-1');
+    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#toc">
+
+
+    <nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand navbar-text" href="#">Stats 115 - UC Irvine - Winter 2020</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" >    <i class="fas fa-bars" style="color:##000000; font-size:28px;"></i>
+</span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"> <a class ="nav-link" href="main.html">Home</a></li>
+        <li class="nav-item"> <a class ="nav-link" href="policies.html">Policies</a></li>
+        <li class="nav-item"> <a class ="nav-link" href="tools.html">Tools</a></li>
+        <li class="nav-item"> <a class ="nav-link" href="schedule.html">Schedule</a></li>
+        <li class="nav-item"> <a class ="nav-link" href="opp.html">Opportunities</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+  <div class = "main-text">
+    <div class="container">
+      <div class="row">
+        <!-- sidebar, which will move to the top on a small screen -->
+        <div class="col-sm-3">
+          <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+        </div>
+        <!-- main content area -->
+        <div class="col-sm-9">
+
+          <h1>R and RStudio</h1>
+          We will be using R through RStudio GUI in this class.
+          Make sure to download the <b>latest</b> version of R and RStudio.
+          To download R go to <a href="https://cran.cnr.berkeley.edu/">this link</a> to download R for your operating system.
+          For instance you can click
+          <br>
+
+Download R for Windows > install R for the first time > Download R 3.6.2. for Windows
+<br>
+or
+<br>
+Download R for (Mac) OS X >  R-3.6.2.pkg
+<br>
+<br>
+
+Make sure to install after the download completes!
+
+Download and install RStudio using <a href="https://rstudio.com/products/rstudio/download/#download">this link</a>
+and selecting the file appropriate for your operating system.
+Do not forget installation after the download completes.
+<br>
+<br>
+
+<h1>tidyverse</h1>
+We will make use of the packages in tidyverse.
+Make sure to write <code>install.packages("tidyverse")</code> in your Console in R to download these packages.
+<br>
+<br>
+          <h1>rstan</h1>
+We will be using R interface of Stan to fit Bayesian models. Make sure to write <code>install.packages("rstan")</code> in your Console in R to download this package.
+You may be prompted to download other packages. Follow the prompts. If you are unable to download please come to office hours.
+<br>
+<br>
+          <h1>Piazza</h1>
+          If you have a question about anything in this course, it is very
+likely that one of your classmates also has the exact same question.
+In order to reduce number of emails sent, and to form a learning
+community, we will be using Piazza. If you need to ask anything personal, please email me.
+You can access our Piazza page <a href="https://piazza.com/class/k4xf9epznyb6rv#" target ="_blank">here</a> using your UCI email address.
+You should not feel shy to make posts but before you post please make sure to search if the same
+question has already been posted. Also follow <a href="policies.html#online">online communication etiquette</a>
+when posting on Piazza.
+<br>
+<br>
+          <h1>Gradescope</h1>
+          Some homework assignments and take-home exams will be submitted online via Gradescope.
+          You can access the Gradescope page for our course <a href="https://www.gradescope.com/courses/78233" target ="_blank">here</a>
+          It is your responsibility to make sure that the file you submit is in the right format,
+          can be opened, is not blank etc. If you think your work has been graded incorrectly, you can directly use the regrade request feature on Gradescope to communicate with the reader (grader) of the course.
+<br>
+<br>
+          <h1>Canvas</h1>
+          We will be using Canvas to keep track of your grades and also
+              to assign online quizzes (note that not all quizzes will be online).
+              You can access our course <a href="https://canvas.eee.uci.edu/courses/22992" target ="_blank">here</a>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div> <!--main-text-->
+
+
+
+    <footer>
+
+    Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.
+
+
+    </footer>
+
+  </body>
+</html>
