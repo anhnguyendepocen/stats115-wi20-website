@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Introduction to Stats 115 and Bayesian Statistics</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Dogucu" />
+    <meta name="date" content="2020-01-06" />
+    <link rel="stylesheet" href="slide-styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction to Stats 115 and Bayesian Statistics
+### Dr. Dogucu
+### 2020-01-06
+
+---
+
+
+layout: true
+  
+&lt;div class="my-header"&gt;&lt;/div&gt;
+
+&lt;div class="my-footer"&gt; 
+ Copyright &amp;copy; &lt;a href="https://mdogucu.ics.uci.edu"&gt;Dr. Mine Dogucu&lt;/a&gt;. All Rights Reserved.&lt;/div&gt; 
+
+---
+
+## Merhaba
+
+- Hello 
+- ` `Private Sub Form_Load()`     
+    `MsgBox "Hello, World!"`   
+`End Sub` ` 
+- Hallo   
+- مرحبا
+- `print('Hello world')`
+- नमस्ते &amp; السلام عليكم
+- `print("Hello world")`
+- `&lt;html&gt; Hello world&lt;/html&gt;`
+- ¡Hola!
+- سلام
+
+ 
+---
+
+## About Me
+
+
+Mine Dogucu   
+📧 &lt;a href="mailto:mdogucu@uci.edu"&gt;mdogucu@uci.edu&lt;/a&gt;  
+📆 Mon 1:00 - 2 pm  
+📍 DBH 2204  
+
+
+
+---
+
+## Meet and Greet Each Other
+
+In groups three or four meet and greet each other.
+
+Include 
+
+- Your name
+- Your year
+- I live ...
+- My favorite thing about UCI is ...
+- I am awesome because ...
+
+Find something in common between all of you by expanding the conversation. 
+
+Find a difference. 
+
+---
+# How to be successful in this course
+
+- Be punctual
+- Be organized
+- Do the work
+
+# How to make your professor happy
+
+- Be kind
+- Be honest
+
+---
+
+# The most important thing about this course
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;a href = "http://mdogucu.ics.uci.edu/teaching/stats115-wi20/schedule.html"
+style ="font-size: 35px; display:block; text-align:center;"&gt;The course website &lt;/a&gt;
+
+
+---
+
+# What is Bayesian Statistics?
+
+Think 🤔- Pair 👫 - Share 💬
+
+Have you heard of Bayesian Statistics before? If so, what was the context? What do you know about it already?
+
+---
+# Key Point in Bayesian Statistics
+
+It is ok to have prior ideas and to use these ideas.  
+
+---
+
+# Bayesian vs. Frequentist
+
+Consider two claims. (1) Zuofu claims that he can predict the outcome of a coin flip.  To test his claim, you flip a fair coin 10 times and he correctly predicts all 10! 
+
+(2) Kavya claims that she can distinguish Dunkin' coffee from Starbucks coffee.  To test her claim, you give her 10 coffee samples and she correctly identifies the origin of each!  In light of these experiments, what do you conclude?    
+
+a. You're more confident in Kavya's claim than Zuofu's claim.
+b. The evidence supporting Zuofu's claim is just as strong as the evidence supporting Kavya's claim.
+
+---
+
+# Bayesian vs. Frequentist
+
+Your doctor called you to tell you that you have been tested positive for a rare disease. The doctor gives you the opportunity to ask one question. Which of the following would you ask?
+
+a. What is the probability that I actually have the disease given that I have tested positive?  
+b. If I do not have the disease, what is the probability that I would have gotten this positive test result?
+
+---
+
+
+# Notes on Bayesian History
+
+- Frequentist statistics is more popular and Bayesian statistics is starting to get popular. 
+
+- Named after Thomas Bayes (1701-1761).
+
+- Computing, computing, computing.
+
+- It is harder to adopt to newer methods. Thus change is happening slowly. 
+
+- We can embrace subjectivity. 
+
+---
+
+
+# Bayesian vs. Frequentist
+
+.pull-left[
+__Frequentist__
+
+Probability is based on long-term frequencies. 
+
+When answering a question, we assume that the null hypothesis is true and then calculate the probability of observing the data if the null were true. 
+]
+
+.pull-right[
+__Bayesian__
+
+Probability is a balance of relative plausibility of an event and degree of prior ideas.  
+
+When an answering a question we calculate the probability that the null hypothesis is true based on the given data. 
+]
+
+---
+
+
+
+
+# Optional
+
+Watch [How Data Nerds Found A 131-Year-Old Sunken Treasure](https://fivethirtyeight.com/features/how-data-nerds-found-a-131-year-old-sunken-treasure/)
+
+Spoiler alert: They used Bayesian Statistics!
+
+---
+
+# Bayes' Rule for Events 
+---
+# Due
+
+
+* Due Tonight (11:59 pm)   
+  + All About You Survey on Canvas  
+* Due Wednesday (09:30 am)  
+ + Syllabus Quiz
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

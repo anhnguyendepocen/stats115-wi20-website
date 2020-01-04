@@ -1,0 +1,22 @@
+---
+title: "Introduction to Stats 115 and Bayesian Statistics"
+date: "2020-01-06"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- navigate the course website.
+- name your instructor, and grader.
+- name some of your classmates.
+- explain (with baby steps) what Bayesian statistics is about. 
+
+<br>
+<br>
+<br>

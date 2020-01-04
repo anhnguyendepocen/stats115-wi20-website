@@ -1,0 +1,180 @@
+---
+title: "Introduction to Stats 115 and Bayesian Statistics"
+author: "Dr. Dogucu"
+date: "2020-01-06"
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+## Merhaba
+
+- Hello 
+- ` `Private Sub Form_Load()`     
+    `MsgBox "Hello, World!"`   
+`End Sub` ` 
+- Hallo   
+- مرحبا
+- `print('Hello world')`
+- नमस्ते & السلام عليكم
+- `print("Hello world")`
+- `<html> Hello world</html>`
+- ¡Hola!
+- سلام
+
+ 
+---
+
+## About Me
+
+
+Mine Dogucu   
+`r emo::ji("e-mail")` <a href="mailto:mdogucu@uci.edu">mdogucu@uci.edu</a>  
+`r emo::ji("calendar")` Mon 1:00 - 2 pm  
+`r emo::ji("location")` DBH 2204  
+
+
+
+---
+
+## Meet and Greet Each Other
+
+In groups three or four meet and greet each other.
+
+Include 
+
+- Your name
+- Your year
+- I live ...
+- My favorite thing about UCI is ...
+- I am awesome because ...
+
+Find something in common between all of you by expanding the conversation. 
+
+Find a difference. 
+
+---
+# How to be successful in this course
+
+- Be punctual
+- Be organized
+- Do the work
+
+# How to make your professor happy
+
+- Be kind
+- Be honest
+
+---
+
+# The most important thing about this course
+
+<br>
+<br>
+<a href = "http://mdogucu.ics.uci.edu/teaching/stats115-wi20/schedule.html"
+style ="font-size: 35px; display:block; text-align:center;">The course website </a>
+
+
+---
+
+# What is Bayesian Statistics?
+
+Think `r emo::ji("thinking")`- Pair `r emo::ji("couple")` - Share `r emo::ji("speech")`
+
+Have you heard of Bayesian Statistics before? If so, what was the context? What do you know about it already?
+
+---
+# Key Point in Bayesian Statistics
+
+It is ok to have prior ideas and to use these ideas.  
+
+---
+
+# Bayesian vs. Frequentist
+
+Consider two claims. (1) Zuofu claims that he can predict the outcome of a coin flip.  To test his claim, you flip a fair coin 10 times and he correctly predicts all 10! 
+
+(2) Kavya claims that she can distinguish Dunkin' coffee from Starbucks coffee.  To test her claim, you give her 10 coffee samples and she correctly identifies the origin of each!  In light of these experiments, what do you conclude?    
+
+a. You're more confident in Kavya's claim than Zuofu's claim.
+b. The evidence supporting Zuofu's claim is just as strong as the evidence supporting Kavya's claim.
+
+---
+
+# Bayesian vs. Frequentist
+
+Your doctor called you to tell you that you have been tested positive for a rare disease. The doctor gives you the opportunity to ask one question. Which of the following would you ask?
+
+a. What is the probability that I actually have the disease given that I have tested positive?  
+b. If I do not have the disease, what is the probability that I would have gotten this positive test result?
+
+---
+
+
+# Notes on Bayesian History
+
+- Frequentist statistics is more popular and Bayesian statistics is starting to get popular. 
+
+- Named after Thomas Bayes (1701-1761).
+
+- Computing, computing, computing.
+
+- It is harder to adopt to newer methods. Thus change is happening slowly. 
+
+- We can embrace subjectivity. 
+
+---
+
+
+# Bayesian vs. Frequentist
+
+.pull-left[
+__Frequentist__
+
+Probability is based on long-term frequencies. 
+
+When answering a question, we assume that the null hypothesis is true and then calculate the probability of observing the data if the null were true. 
+]
+
+.pull-right[
+__Bayesian__
+
+Probability is a balance of relative plausibility of an event and degree of prior ideas.  
+
+When an answering a question we calculate the probability that the null hypothesis is true based on the given data. 
+]
+
+---
+
+
+
+
+# Optional
+
+Watch [How Data Nerds Found A 131-Year-Old Sunken Treasure](https://fivethirtyeight.com/features/how-data-nerds-found-a-131-year-old-sunken-treasure/)
+
+Spoiler alert: They used Bayesian Statistics!
+
+---
+
+# Bayes' Rule for Events 
+---
+# Due
+
+
+* Due Tonight (11:59 pm)   
+  + All About You Survey on Canvas  
+* Due Wednesday (09:30 am)  
+ + Syllabus Quiz
+
+
