@@ -15,7 +15,9 @@ By the end of this lecture, you will be able to:
 - navigate the course website.
 - name your instructor, and grader.
 - name some of your classmates.
-- explain (with baby steps) what Bayesian statistics is about. 
+- write code using tidyverse style. 
+- use terminology such as joint, marginal, and conditional probability. 
+- apply Bayes' rule to events.
 
 <br>
 <br>
