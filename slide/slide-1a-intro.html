@@ -50,7 +50,7 @@ layout: true
 
 Mine Dogucu   
 📧 &lt;a href="mailto:mdogucu@uci.edu"&gt;mdogucu@uci.edu&lt;/a&gt;  
-📆 Mon 1:00 - 2 pm  
+📆 M 11 am - 12 pm &amp; W 3 - 4 pm  
 📍 DBH 2204  
 
 
@@ -64,7 +64,7 @@ In groups three or four meet and greet each other.
 Include 
 
 - Your name
-- Your year
+- Your year (most likely senior)
 - I live ...
 - My favorite thing about UCI is ...
 - I am awesome because ...
@@ -99,14 +99,14 @@ style ="font-size: 35px; display:block; text-align:center;"&gt;The course websit
 
 # What is Bayesian Statistics?
 
-Think 🤔- Pair 👫 - Share 💬
+Think 🤔- Pair 👫 - Share 🗨️
 
 Have you heard of Bayesian Statistics before? If so, what was the context? What do you know about it already?
 
 ---
 # Key Point in Bayesian Statistics
 
-It is ok to have prior ideas and to use these ideas.  
+It is ok to have prior ideas and expert knowledge and to use these ideas and weight it against the observed data.
 
 ---
 
@@ -176,9 +176,137 @@ Watch [How Data Nerds Found A 131-Year-Old Sunken Treasure](https://fivethirtyei
 Spoiler alert: They used Bayesian Statistics!
 
 ---
+# Probability Review
+
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-x5q1{font-size:16px;text-align:left;vertical-align:top}
+.tg .tg-vox4{font-weight:bold;font-size:16px;text-align:left;vertical-align:top}
+.tg .tg-cqfb{font-size:16px;text-align:left;vertical-align:middle}
+&lt;/style&gt;
+&lt;table class="tg" align="center"&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-x5q1"&gt;&lt;/th&gt;
+    &lt;th class="tg-x5q1" colspan="2"&gt;Belief in afterlife&lt;/th&gt;
+    &lt;th class="tg-x5q1"&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-cqfb"&gt;Taken a college science class&lt;/td&gt;
+    &lt;td class="tg-cqfb"&gt;Yes&lt;/td&gt;
+    &lt;td class="tg-cqfb"&gt;No&lt;/td&gt;
+    &lt;td class="tg-vox4"&gt;Total&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-cqfb"&gt;Yes&lt;/td&gt;
+    &lt;td class="tg-cqfb"&gt;2702&lt;/td&gt;
+    &lt;td class="tg-cqfb"&gt;634&lt;/td&gt;
+    &lt;td class="tg-vox4"&gt;&lt;span style="font-weight:700"&gt;3336&lt;/span&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-cqfb"&gt;No&lt;/td&gt;
+    &lt;td class="tg-cqfb"&gt;3722&lt;/td&gt;
+    &lt;td class="tg-cqfb"&gt;837&lt;/td&gt;
+    &lt;td class="tg-vox4"&gt;&lt;span style="font-weight:700"&gt;4559&lt;/span&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-vox4"&gt;Total&lt;/td&gt;
+    &lt;td class="tg-vox4"&gt;6424&lt;/td&gt;
+    &lt;td class="tg-vox4"&gt;&lt;span style="font-weight:bold"&gt;1471&lt;/span&gt;&lt;/td&gt;
+    &lt;td class="tg-vox4"&gt;7895&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+
+&lt;p style="font-size: small"&gt;
+Data from &lt;a href ="https://gssdataexplorer.norc.org"&gt; General Social Survey&lt;/a&gt;
+&lt;/p&gt;
+
+`\(P(\text{belief in afterlife})\)` = ?
+`\(P(\text{belief in afterlife and taken a college science class})\)` = ?  
+`\(P(\text{belief in afterlife given taken a college science class})\)` = ?
+
+Calculate these probabilities and write them using correct notation. Use `\(A\)` for belief in afterlife and `\(S\)` for college science class.
+---
+---
+## Vocabulary Review
+
+`\(P(A^C)\)` is called __complement__ of event A and represents the probability of selecting someone that does not believe in afterlife.  
+
+---
+## Vocabulary Review
+
+`\(P(A)\)` represents a __marginal probability__. So do `\(P(S)\)`, `\(P(A^C)\)` and `\(P(S^C)\)`. In order to calculate these probabilities we could only use the values in the margins of the contingency table, hence the name. 
+
+---
+## Vocabulary Review
+`\(P(A \cap S)\)` represents a __joint probability__. So do `\(P(A^c \cap S)\)`, `\(P(A\cap S^c)\)` and `\(P(A^c\cap S^c)\)`. 
+
+Note that `\(P(A\cap S) = P(S\cap A)\)`. Order does _not_ matter.
+
+---
+## Vocabulary Review
+`\(P(A|S)\)` represents a __conditional probability__. So do `\(P(A^c|S)\)`, `\(P(A | S^c)\)` and `\(P(A^c|S^c)\)`. In order to calculate these probabilities we would focus on the row or the column of the given information. In a way we are _reducing_ our sample space to this given information only. 
+
+---
+## Note on conditional probability
+
+`\(P(\text{attending every class | getting an A}) \neq\)` `\(P(\text{getting an A | attending every class})\)`
+
+The order matters!
+
+---
 
 # Bayes' Rule for Events 
+
+You may recall from your previous courses that we define a conditional probability as:
+
+`\(P(A|B) = \frac{P(A \cap B)}{P(B)}\)`
+
+Note that the denominator is `\(P(B)\)` because we know that event B has happened (it is given to us that it has happened) we can reduce our sample space to just event B.
+
 ---
+
+# From Conditional Probability to Bayes' Rule for Events
+
+Before we build Bayes' rule for events using conditional probability, you may be asking yourself how we can have a WHOLE quarter dedicated to one single formula in statistics. 
+
+Well, we are going to expand that formula. Also, we will apply it for different probability models (discrete and continuous).
+
+For now let's only focus on events.
+
+---
+## Example
+
+An algorithm is written to detect cat images. When given a cat image the algorithm identifies the image as a cat image 80% of the time. However, when given an image without a cat the algorithm falsely identifies it as a cat image 50% of the time. The algorithm is to be tested with a set of images of which are 7% cat images. What is the probability that an image is a cat image if the algorithm identifies it as a cat image?
+---
+# Write out the given information
+
+Let event `\(A\)` represent an event of algorithm identifying an image as a cat image
+
+Let event `\(B\)` represent an event of an image being a cat image.
+---
+# Bayes' Rule for Events 
+
+---
+# Total Law of Probability
+
+---
+# Solving the Cat Problem
+---
+## Bayes' Rule for Events
+
+`\(P(B |A) = \frac{P(A \cap B)}{P(A)} = \frac{P(A|B)P(B)}{P(A)}\)`
+
+where, by the Law of Total Probability,     
+
+`\(P(A) = P(A|B)P(B) + P(A|B^c)P(B^c)\)`
+
+
+---
+
+
 # Due
 
 
