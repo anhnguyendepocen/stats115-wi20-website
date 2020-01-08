@@ -1,0 +1,22 @@
+---
+title: "Bayes' Rule for Events and Discrete Random Variables"
+date: "2020-01-08"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- use teminology such as prior, likelihood, and posterior.
+- use correct notation for prior, likelihood, and posterior.
+- calculate posterior probability for events.
+- calculate posterior model for discrete random variables.
+
+<br>
+<br>
+<br>
