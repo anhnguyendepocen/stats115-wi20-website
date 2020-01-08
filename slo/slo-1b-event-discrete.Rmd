@@ -12,7 +12,7 @@ output:
 
 By the end of this lecture, you will be able to:
 
-- use teminology such as prior, likelihood, and posterior.
+- use terminology such as prior, likelihood, and posterior.
 - use correct notation for prior, likelihood, and posterior.
 - calculate posterior probability for events.
 - calculate posterior model for discrete random variables.
