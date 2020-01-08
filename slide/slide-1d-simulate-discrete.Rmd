@@ -1,0 +1,61 @@
+---
+title: "Simulating Bayesian Models"
+author: "Dr. Dogucu"
+date: "2020-01-08"
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+## Styleguide
+
+```{r eval = FALSE}
+
+abc<-20
+abc <- 20
+homework_1<-20
+homework_1 <- 20
+
+```
+
+---
+
+## Styleguide
+
+
+We will be using [tidyverse style guide](https://style.tidyverse.org/).
+
+[Names](https://style.tidyverse.org/files.html#names)  
+[Object Names](https://style.tidyverse.org/syntax.html#object-names)  
+[Spacing](https://style.tidyverse.org/syntax.html#spacing) 
+[Pipes](https://style.tidyverse.org/pipes.html)  
+[ggplot](https://style.tidyverse.org/ggplot2.html)
+
+---
+
+## Workflow
+
+We will use Projects (.Rproj)
+
+We will write R Markdown files (.Rmd)
+---
+## Simulation
+
+---
+## Gradescope
+
+Two problems with open ended homework: 1) the file you submit must be pdf 2) Grading is easier for us when each question is on a separate page. 
+
+Your homework instructions will ask you to submit homework such that each question is on a separate page. 
+
+In order to get a separate page we can use `\pagebreak`
