@@ -1,0 +1,20 @@
+---
+title: "Beta Prior"
+date: "2020-01-13"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- tune shape parameters of Beta distribution.
+- calculate expected value, variance, and mode of Beta distribution.
+
+<br>
+<br>
+<br>
