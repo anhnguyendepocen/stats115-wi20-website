@@ -1,4 +1,6 @@
 #Code author: Mine Dogucu
+library(ggplot2)
+
 
 plot_beta <- function(alpha, beta){
   ggplot(data = data.frame(x = c(0, 1)),
