@@ -1,0 +1,46 @@
+---
+title: "Beta Prior"
+author: "Dr. Dogucu"
+date: "2020-01-13"
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+## Announcements
+
+- Office Hours conflict?
+
+- Tone on Piazza
+
+- Wednesday discussion: R (tidyverse) review
+
+## Review 
+
+One discrete question
+Make sure to write the marginal probability as a summation sign.
+
+
+
+
+## Beta Prior
+
+## Beta Parameters
+
+## Beta Variance
+
+## Beta Mean
+
+## Beta Mode
+
+
