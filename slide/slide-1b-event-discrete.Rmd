@@ -210,7 +210,7 @@ Scenario 2: What if this program accepted none of the five applicants?
 
 ## Intuition vs. Reality
 
-Your intuition may be wrong if
+Your intuition may not be Bayesian if
 - you have only relied on the prior model to decide on the posterior model.
 - you have only relied on the data to decide on the posterior model.
 
@@ -406,7 +406,7 @@ dbinom(x = 3, size = 5, prob = 0.9)
 
 Thus 
 
-$f(x = 3 | \pi = 0.9) =$
+$f(x = 3) =$
 
 ```{r}
 dbinom(x = 3, size = 5, prob = 0.1) * 0.7 +

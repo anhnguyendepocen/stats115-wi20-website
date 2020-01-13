@@ -80,8 +80,8 @@ Focusing on the last feature, Priya decides to look at some data. In her one-mon
 
 ---
 
-<div id="htmlwidget-299716b8a40478f6a306" style="width:504px;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-299716b8a40478f6a306">{"x":{"diagram":"\n    digraph {\n        # graph aesthetics\n        graph [ranksep = 0.5]\n\n        # node definitions with substituted label text\n        1 [label = \"Prior: \n Only 40% of emails are spam.\"]\n        2 [label = \"Data: \n All caps is more common among spam.\"]\n        3 [label = \"Posterior: \n Is the email spam or not?!\"]\n\n        # edge definitions with the node IDs\n        1 -> 3\n        2 -> 3\n    }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-acd4e5da11cee5f2350c" style="width:504px;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-acd4e5da11cee5f2350c">{"x":{"diagram":"\n    digraph {\n        # graph aesthetics\n        graph [ranksep = 0.5]\n\n        # node definitions with substituted label text\n        1 [label = \"Prior: \n Only 40% of emails are spam.\"]\n        2 [label = \"Data: \n All caps is more common among spam.\"]\n        3 [label = \"Posterior: \n Is the email spam or not?!\"]\n\n        # edge definitions with the node IDs\n        1 -> 3\n        2 -> 3\n    }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 ---
 
 Which of the following best describes your posterior understanding of whether the email is spam?
@@ -207,7 +207,7 @@ Scenario 2: What if this program accepted none of the five applicants?
 
 ## Intuition vs. Reality
 
-Your intuition may be wrong if
+Your intuition may not be Bayesian if
 - you have only relied on the prior model to decide on the posterior model.
 - you have only relied on the data to decide on the posterior model.
 
@@ -380,7 +380,7 @@ dbinom(x = 3, size = 5, prob = 0.9)
 
 Thus 
 
-`\(f(x = 3 | \pi = 0.9) =\)`
+`\(f(x = 3) =\)`
 
 
 ```r
