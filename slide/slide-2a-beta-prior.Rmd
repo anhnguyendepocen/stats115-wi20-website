@@ -172,7 +172,10 @@ ggplot(betas, aes(x = x, y = y)) +
 ```
 
 ---
+## Plotting Beta Prior
 
+Use the `plot_beta()` function provided to you on the course web page. Try different values for alpha and beta. Do you notice any patterns?
+---
 ## Beta Descriptives
 
 $E(\pi) = \frac{\alpha}{\alpha + \beta}$
