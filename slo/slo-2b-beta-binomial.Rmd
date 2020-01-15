@@ -1,0 +1,22 @@
+---
+title: "The Beta-Binomial Model"
+date: "2020-01-15"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- calculate shape parameters of the posterior Beta distribution.
+- define a conjugate prior.
+- calculate expected value, variance, and mode of a posterior Beta distribution.
+- use `plot_beta_binomial()` to show update from prior to posterior distribution.
+
+<br>
+<br>
+<br>

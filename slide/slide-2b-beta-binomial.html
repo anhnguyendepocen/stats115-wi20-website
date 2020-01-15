@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>The Beta-Binomial Model</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Dogucu" />
+    <meta name="date" content="2020-01-15" />
+    <link rel="stylesheet" href="slide-styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# The Beta-Binomial Model
+### Dr. Dogucu
+### 2020-01-15
+
+---
+
+
+layout: true
+  
+&lt;div class="my-header"&gt;&lt;/div&gt;
+
+&lt;div class="my-footer"&gt; 
+ Copyright &amp;copy; &lt;a href="https://mdogucu.ics.uci.edu"&gt;Dr. Mine Dogucu&lt;/a&gt;. All Rights Reserved.&lt;/div&gt; 
+
+---
+
+## Announcements
+
+- Change of office hours. Now on M at 1 - 2 pm.
+
+- Review of previous slides.
+
+---
+## Posterior for the Beta-Binomial Model
+Let `\(\pi \sim \text{Beta}(\alpha, \beta)\)` and `\(X|n \sim \text{Bin}(n,\pi)\)`. Write out the following using notation. We will find the posterior together.
+
+`\(\text{posterior} \propto \text{prior} \times \text{likelihood}\)`
+
+---
+---
+## Conjugate prior
+
+We say that `\(f(\pi)\)` is a conjugate prior for `\(L(\pi|x)\)` if the posterior, `\(f(\pi|x) \propto f(\pi)L(\pi|x)\)`, is from the same model family as the prior.  
+
+Thus, Beta distribution is a conjugate prior for the Binomial likelihood model since the posterior also follows a Beta distribution.
+
+---
+## Bike ownership
+The transportation office at our school wants to know `\(\pi\)` the proportion of people who own bikes on campus so that they can build bike racks accordingly. The staff at the office think that the `\(\pi\)` is more likely to be somewhere 0.05 to 0.25. The plot below shows their prior distribution. Write out `\(f(\pi)\)`. Calculate the prior expected value, mode, and variance. 
+
+
+
+
+&lt;img src="slide-2b-beta-binomial_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Bike ownership
+---
+## Bike ownership posterior
+
+The transportation office decides to collect some data and samples 50 people on campus and asks them whether they own a bike or not. It turns out that 25 of them do! What is the posterior distribution of `\(\pi\)` after having observed this data? 
+
+
+---
+## Bike ownership: balancing act
+
+
+
+
+```r
+plot_beta_binomial(alpha = 5, beta = 35,
+                   x = 25, n = 50)
+```
+
+&lt;img src="slide-2b-beta-binomial_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+## Posterior Descriptives
+
+`\(\pi|(X=x) \sim \text{Beta}(\alpha+x, \beta+n-x)\)`
+
+`$$E(\pi | (X=x)) = \frac{\alpha + x}{\alpha + \beta + n}$$` 
+$$\text{Mode}(\pi | (X=x))  = \frac{\alpha + x - 1}{\alpha + \beta + n - 2} $$
+`$$\text{Var}(\pi | (X=x))   = \frac{(\alpha + x)(\beta + n - x)}{(\alpha + \beta + n)^2(\alpha + \beta + n + 1)}\\$$`
+---
+
+## Bike ownership - descriptives of the posterior
+
+What is the descriptive measures (expected value, mode, and variance) of the posterior distribution for the bike ownership example?
+
+---
+
+## Election 2020
+
+You are hired by one of the candidates who are running for president in 2020. You will be analyzing data for this candidate until the political party of the candidate officially nominates a candidate. Think of a political candidate that you may work for. Keep this name to yourself!!! Here is a [list](https://www.nytimes.com/interactive/2019/us/politics/2020-presidential-candidates.html) of candidates. Without searching anything about this candidate based on what you already know plot a prior distribution for `\(\pi\)` which represents the probability of this candidate being their party's presidential nominee. 
+
+---
+## Prior 
+
+Tune Beta distribution so that you have exact shape parameters for your Beta. Feel free to use R to `plot_beta()`.
+
+---
+
+## Descriptives of the Prior 
+
+Calculate the expected value, variance, and mode of the prior distribution.
+
+---
+
+## Data
+
+The data science team is hard at work. They polled registered voters of the political party and found that of the 300 people polled 118 would vote for the candidate you work for. 
+
+---
+
+## Posterior Analysis
+
+Calculate the posterior distribution for based on the observed data. Identify the expected value, mode, and variance of the posterior distribution. Use R to `plot_beta_binomial()` to see the change from the prior to posterior.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+---
+title: "Keeping R tidy"
+date: "2020-01-15"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- use .Rmd for writing reports.
+- use `ggplot()` for visualizing data.
+- use `dplyr()` and `tidyr()` functions to wrangle data.
+
+<br>
+<br>
+<br>

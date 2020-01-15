@@ -1,0 +1,207 @@
+---
+title: "The Beta-Binomial Model"
+author: "Dr. Dogucu"
+date: "2020-01-15"
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+## Announcements
+
+- Change of office hours. Now on M at 1 - 2 pm.
+
+- Review of previous slides.
+
+---
+## Posterior for the Beta-Binomial Model
+Let $\pi \sim \text{Beta}(\alpha, \beta)$ and $X|n \sim \text{Bin}(n,\pi)$. Write out the following using notation. We will find the posterior together.
+
+$\text{posterior} \propto \text{prior} \times \text{likelihood}$
+
+---
+---
+## Conjugate prior
+
+We say that $f(\pi)$ is a conjugate prior for $L(\pi|x)$ if the posterior, $f(\pi|x) \propto f(\pi)L(\pi|x)$, is from the same model family as the prior.  
+
+Thus, Beta distribution is a conjugate prior for the Binomial likelihood model since the posterior also follows a Beta distribution.
+
+---
+## Bike ownership
+The transportation office at our school wants to know $\pi$ the proportion of people who own bikes on campus so that they can build bike racks accordingly. The staff at the office think that the $\pi$ is more likely to be somewhere 0.05 to 0.25. The plot below shows their prior distribution. Write out $f(\pi)$. Calculate the prior expected value, mode, and variance. 
+
+```{r echo = FALSE}
+library(ggplot2)
+
+
+plot_beta <- function(alpha, beta){
+  ggplot(data = data.frame(x = c(0, 1)),
+         aes(x)) +
+    stat_function(fun = dbeta,
+                  n = 101,
+                  args = list(shape1 = alpha,
+                              shape2=beta)) +
+    labs(x = expression(pi), y =
+           expression(paste("f(",pi,")")),
+         title = paste0("Beta(", alpha, ",",beta, ")")) +
+    theme(plot.title = element_text(hjust = 0.5))
+  
+}
+```
+
+
+```{r fig.align='center', fig.height=4, echo = FALSE}
+plot_beta(5, 35) +
+    theme(text = element_text(size=20)) 
+```
+
+---
+
+## Bike ownership
+---
+## Bike ownership posterior
+
+The transportation office decides to collect some data and samples 50 people on campus and asks them whether they own a bike or not. It turns out that 25 of them do! What is the posterior distribution of $\pi$ after having observed this data? 
+
+
+---
+## Bike ownership: balancing act
+
+```{r echo = FALSE}
+## function written by Alicia A. Johnson
+plot_beta_binomial <- function (alpha,
+                                beta,
+                                x = NULL,
+                                n = NULL,
+                                prior = TRUE,
+                                likelihood = TRUE,
+                                posterior = TRUE){
+  if (is.null(x) | is.null(n))
+    warning("To visualize the posterior,
+            specify data x and n")
+  
+  g <- ggplot(NULL, aes(x = c(0, 1))) +
+    labs(x = expression(pi),
+         y = "density") +
+    scale_fill_manual("",
+                      values = c(prior = "gold1",
+                                 `(scaled) likelihood` = "cyan2",
+                                 posterior = "cyan4"),
+                      breaks = c("prior",
+                                 "(scaled) likelihood",
+                                 "posterior"))
+  if (prior == TRUE) {
+    g <- g +
+      stat_function(fun = dbeta,
+                    args = list(shape1 = alpha,
+                                shape2 = beta)) +
+      stat_function(fun = dbeta,
+                    args = list(shape1 = alpha,
+                                shape2 = beta),
+                    geom = "area",
+                    alpha = 0.5,
+                    aes(fill = "prior"))
+  }
+  
+  if (!is.null(x) & !is.null(n)) {
+    alpha_post <- alpha + x
+    beta_post <- beta + n - x
+    x_data <- x
+    like_scaled <- function(x) {
+      like_fun <- function(x) {
+        dbinom(x = x_data, size = n, prob = x)
+      }
+      scale_c <- integrate(like_fun, lower = 0, upper = 1)[[1]]
+      like_fun(x)/scale_c
+    }
+  }
+  if (!is.null(x) & !is.null(n) & (likelihood != FALSE)) {
+    g <- g +
+      stat_function(fun = like_scaled) +
+      stat_function(fun = like_scaled,
+                    geom = "area",
+                    alpha = 0.5,
+                    aes(fill = "(scaled) likelihood"))
+  }
+  if (!is.null(x) & !is.null(n) & posterior == TRUE) {
+    g <- g +
+      stat_function(fun = dbeta,
+                    args = list(shape1 = alpha_post,
+                                shape2 = beta_post)) +
+      stat_function(fun = dbeta,
+                    args = list(shape1 = alpha_post,
+                                shape2 = beta_post),
+                    geom = "area", alpha = 0.5,
+                    aes(fill = "posterior"))
+  }
+  g
+} # end of function
+```
+
+```{r eval = FALSE}
+plot_beta_binomial(alpha = 5, beta = 35,
+                   x = 25, n = 50)
+```
+
+```{r fig.align='center', fig.height=5, echo = FALSE}
+plot_beta_binomial(alpha = 5, beta = 13,
+                   x = 25, n = 50) +
+      theme(text = element_text(size=20)) 
+
+```
+
+
+
+---
+## Posterior Descriptives
+
+$\pi|(X=x) \sim \text{Beta}(\alpha+x, \beta+n-x)$
+
+$$E(\pi | (X=x)) = \frac{\alpha + x}{\alpha + \beta + n}$$ 
+$$\text{Mode}(\pi | (X=x))  = \frac{\alpha + x - 1}{\alpha + \beta + n - 2} $$
+$$\text{Var}(\pi | (X=x))   = \frac{(\alpha + x)(\beta + n - x)}{(\alpha + \beta + n)^2(\alpha + \beta + n + 1)}\\$$
+---
+
+## Bike ownership - descriptives of the posterior
+
+What is the descriptive measures (expected value, mode, and variance) of the posterior distribution for the bike ownership example?
+
+---
+
+## Election 2020
+
+You are hired by one of the candidates who are running for president in 2020. You will be analyzing data for this candidate until the political party of the candidate officially nominates a candidate. Think of a political candidate that you may work for. Keep this name to yourself!!! Here is a [list](https://www.nytimes.com/interactive/2019/us/politics/2020-presidential-candidates.html) of candidates. Without searching anything about this candidate based on what you already know plot a prior distribution for $\pi$ which represents the probability of this candidate being their party's presidential nominee. 
+
+---
+## Prior 
+
+Tune Beta distribution so that you have exact shape parameters for your Beta. Feel free to use R to `plot_beta()`.
+
+---
+
+## Descriptives of the Prior 
+
+Calculate the expected value, variance, and mode of the prior distribution.
+
+---
+
+## Data
+
+The data science team is hard at work. They polled registered voters of the political party and found that of the 300 people polled 118 would vote for the candidate you work for. 
+
+---
+
+## Posterior Analysis
+
+Calculate the posterior distribution for based on the observed data. Identify the expected value, mode, and variance of the posterior distribution. Use R to `plot_beta_binomial()` to see the change from the prior to posterior. 
