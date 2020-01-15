@@ -155,7 +155,7 @@ plot_beta_binomial(alpha = 5, beta = 35,
 ```
 
 ```{r fig.align='center', fig.height=5, echo = FALSE}
-plot_beta_binomial(alpha = 5, beta = 13,
+plot_beta_binomial(alpha = 5, beta = 35,
                    x = 25, n = 50) +
       theme(text = element_text(size=20)) 
 
