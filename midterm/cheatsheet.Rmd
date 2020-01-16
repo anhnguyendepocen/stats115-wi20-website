@@ -1,0 +1,45 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+Midterm
+
+\textbf{Bayes' Rule for Events}
+
+\large$P(B |A) = \frac{P(A \cap B)}{P(A)} = \frac{P(A|B)P(B)}{P(A)}$
+
+where, by the Law of Total Probability,     
+
+$P(A) = P(A|B)P(B) + P(A|B^c)P(B^c)$
+
+\textbf{Posterior Model}
+
+\large$f(\pi|x) = \frac{f(\pi)L(\pi|x)}{f(x)} \propto f(\pi)L(\pi|x)$
+
+\textbf{Beta Model}
+
+$\pi \sim \text{Beta} (\alpha, \beta)$
+
+The Beta model is specified by continuous pdf
+
+$f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-1} (1-\pi)^{\beta-1} \;\; \text{ for } \pi \in [0,1], \alpha >0, \text{and } \beta>0$
+
+ where $\Gamma(z) = \int_0^\infty x^{z-1}e^{-x}dx$ and $\Gamma(z + 1) = z \Gamma(z)$.  Fun fact: when $z$ is a positive integer, then $\Gamma(z)$ simplifies to $\Gamma(z) = (z-1)!$.   
+ 
+ 
+\textbf{Beta Descriptives}
+ 
+ $E(\pi) = \frac{\alpha}{\alpha + \beta}$
+
+$\text{Mode}(\pi) = \frac{\alpha - 1}{\alpha + \beta - 2}$  
+
+$\text{Var}(\pi) = \frac{\alpha \beta}{(\alpha + \beta)^2(\alpha + \beta + 1)}$
+
+\textbf{The Beta-Binomial Model}
+
+Let $\pi \sim \text{Beta}(\alpha, \beta)$ and $X|n \sim \text{Bin}(n,\pi)$ then
+
+$\pi|(X=x) \sim \text{Beta}(\alpha+x, \beta+n-x)$
+
+

@@ -1,0 +1,18 @@
+---
+title: "Midterm"
+output: 
+  html_document:
+    css: midterm-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+Take home part of the midterm will be posted here by January 31st at 5 pm. This part will be due Feb 7th at 5 pm. You will work individually on this part of the midterm. 
+
+The in class part of the midterm will be in class during regular time and at regular location on Feb 10th. This exam will be closed book but you will be given a cheatsheet. Note that this [cheatsheet](cheatsheet.pdf) is currently under construction as we learn more. I will let you know when the final version is posted. You can also read the [policies](policies.pdf) for the in class exam.
+
+
+
+<br>
+<br>
+<br>
