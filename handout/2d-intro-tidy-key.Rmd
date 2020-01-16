@@ -1,0 +1,99 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+\section{Keeping R tidy - Answer Key}
+
+[Metro Bike Share](https://bikeshare.metro.net/) is a bike sharing system that operates in Los Angeles. Metro has been administering this bike share system since July 7, 2016. The way it works is riders can pick up a bike from one of the bike stations, ride it, and return it to a bike station. Make sure to read their homepage for more information about how the pricing works. 
+
+Metro provides data on bike rides https://bikeshare.metro.net/about/data/. We will be using the data from the third quarter of 2019. Complete the following tasks based on this data.
+
+```{r message = FALSE}
+library(tidyverse)
+```
+
+
+1. Download the dataset and read it into R.
+
+```{r}
+bike2 <- read.csv("data/metro-bike-share-trips-2019-q3.csv")
+bike <- read_csv("data/metro-bike-share-trips-2019-q3.csv")
+
+```
+
+```{r}
+bike %>% 
+  filter(bike_id == "Rblock")
+```
+
+```{r}
+bike %>% 
+  slice(c(32310,32314))
+
+```
+
+
+2. Check how many variables, and how many observations the dataset has. What does each row represent in the data?
+
+```{r}
+glimpse(bike)
+```
+
+
+3. Can you calculate how much money riders have paid to Metro in third quarter of 2019? If yes, calculate the value, if not explain why it cannot be calculated.
+
+No
+
+4. If you look into `passholder_type` closely, you will realize that some of the rides were test rides. Eliminate any ride that was a test ride from the dataset. 
+
+```{r}
+count(bike, passholder_type)
+
+bike <- 
+  bike %>% 
+  filter(passholder_type != "Testing")
+```
+
+
+5. There are three types of bike used in the Metro bike system as standard, electric, and smart. We want to make a comparison of standard bikes and the other two types. Make a new variable called standard. This variable should have "yes" values for bikes that are standard and "no" values for bikes that are electric or smart.
+
+```{r}
+bike <-
+  bike %>% 
+  mutate(bike_type = as.factor(bike_type))
+
+count(bike, bike_type)
+```
+
+```{r}
+bike <- bike %>% 
+  mutate(standard = case_when(bike_type == "standard" ~ "yes",
+                              bike_type != "standard" ~ "no"))
+```
+
+
+6. Calculate the mean, median, n, sd, for standard and nonstandard bike rides.
+
+```{r}
+bike %>% 
+  group_by(standard) %>% 
+  summarize(mean_dur = mean(duration), sd_dur = sd(duration),
+            med_dur = median(duration), n = n())
+
+bike_summary <- bike %>% 
+  group_by(standard) %>% 
+  summarize(mean_dur = mean(duration), sd_dur = sd(duration),
+            med_dur = median(duration), n = n())
+
+```
+
+
+7. Calculate the proportion of standard and nonstandard bike rides.
+
+```{r}
+bike_summary %>% 
+  mutate(prop = n/sum(n))
+```
+
