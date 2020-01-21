@@ -1,0 +1,120 @@
+---
+title: "Balance and Sequentiality in Bayesian Analysis"
+author: "Dr. Dogucu"
+date: "2020-01-22"
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r message = FALSE}
+library(titanic)
+library(tidyverse)
+library(fivethirtyeight)
+
+titanic_train <- 
+  titanic_train %>% 
+  mutate(Survived = case_when(Survived == 0 ~ "Not Survived",
+                              Survived == 1 ~ "Survived")) %>% 
+  mutate(Pclass = as.factor(Pclass))
+```
+
+
+---
+
+## Review
+
+Which R functions do you recall from last discussion?
+
+What is the shortcut for `%>%`?
+
+---
+
+## Data 
+
+We will be using ???
+
+---
+
+
+
+
+---
+
+
+
+---
+
+## Who uses ggplot? Some examples
+
+[BBC](https://bbc.github.io/rcookbook/)  
+
+[FiveThirtyEight](https://fivethirtyeight.com/features/the-rise-of-religiously-inspired-terrorism-in-france/)  
+[Master List](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html#Histogram)  
+
+---
+
+## Three steps of basic visualization with ggplot2 package
+
+1. Make some space (this soon will make sense) using the `ggplot()` function.
+
+2. Draw your axes using `aes()` function.
+
+3. Add your plot, whether it is  histogram, bar plot or something else. We will call these geom objects.
+
+---
+
+## Planning for ggplot
+
+For every plot, 
+
+1) Decide, what variables to use.  
+2) Decide which variable is on which axes.  
+3) Decide what kind of plot it is.  
+
+
+
+
+---
+
+class: center, inverse
+## More colors
+
+<br>
+<br>
+<br>
+
+[bit.ly/colors-r](bit.ly/colors-r)
+
+---
+
+
+class: center, inverse
+## More shapes
+
+<br>
+<br>
+<br>
+
+[bit.ly/shapes-r](bit.ly/shapes-r)
+
+---
+
+
+
+

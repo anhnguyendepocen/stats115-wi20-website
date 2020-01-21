@@ -1,0 +1,21 @@
+---
+title: "Balance and Sequentiality in Bayesian Analysis"
+date: "2020-01-22"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- explain the effect of the prior and data on the posterior.
+
+- update posterior iteratively based on sequential data.
+
+<br>
+<br>
+<br>
