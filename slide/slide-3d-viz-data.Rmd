@@ -1,5 +1,5 @@
 ---
-title: "Balance and Sequentiality in Bayesian Analysis"
+title: "Data visualization review"
 author: "Dr. Dogucu"
 date: "2020-01-22"
 output: 
@@ -17,15 +17,9 @@ layout: true
 
 ---
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
-```{r message = FALSE}
+```{r message = FALSE, echo = FALSE, warning = FALSE}
 library(titanic)
 library(tidyverse)
-library(fivethirtyeight)
 
 titanic_train <- 
   titanic_train %>% 
@@ -33,9 +27,6 @@ titanic_train <-
                               Survived == 1 ~ "Survived")) %>% 
   mutate(Pclass = as.factor(Pclass))
 ```
-
-
----
 
 ## Review
 
@@ -47,24 +38,19 @@ What is the shortcut for `%>%`?
 
 ## Data 
 
-We will be using ???
+We will be using `titanic_train` dataset from the `titanic` dataset. 
+
+Glimpse at the data. Does everything look like it should?
 
 ---
 
-
-
-
----
-
-
-
----
 
 ## Who uses ggplot? Some examples
 
 [BBC](https://bbc.github.io/rcookbook/)  
 
 [FiveThirtyEight](https://fivethirtyeight.com/features/the-rise-of-religiously-inspired-terrorism-in-france/)  
+
 [Master List](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html#Histogram)  
 
 ---
@@ -87,9 +73,111 @@ For every plot,
 2) Decide which variable is on which axes.  
 3) Decide what kind of plot it is.  
 
+---
+
+```{r fig.align = "center", fig.height=6, echo = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram() +
+  theme(text = element_text(size=30))
+```
+
+Why are we getting this warning? 
+
+
+---
+
+```{r fig.align = "center", fig.height=6, echo = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram(binwidth = 15) +
+  theme(text = element_text(size=30))
+```
+  
+What step of the code is binwidth related to?
+  
+---
+
+## Cheatsheet
+
+Look at the ggplot cheatsheet. Moving on you will attempt at making the plot by finding the geom object from your cheatsheet.
+---
+<br>
+<br>
+<br>
+```{r fig.align = "center", fig.height=6, echo = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Pclass, y = Fare)) +
+  geom_boxplot() +
+  theme(text = element_text(size=30))
+```
+
+---
+## You Attempt This First
+
+Make a plot that shows the relationship between age of the passenger and the fare that they paid. Comment whether older passengers bought more expensive tickets.
+
+---
+
+```{r fig.height=6, fig.align='center', echo = FALSE, warning = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Age, y = Fare )) +
+  geom_point() +
+  theme(text = element_text(size=30))
+```
+
+
+---
+## Color 
+
+```{r echo = TRUE, eval = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Fare )) + 
+  geom_histogram(color = "salmon") 
+```
+
+```{r fig.height = 5, echo = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Fare )) + 
+  geom_histogram(color = "salmon") +
+  theme(text = element_text(size=30))
+```
 
 
 
+---
+
+## Fill 
+
+```{r echo = TRUE, eval = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram(fill = "salmon") 
+```
+
+```{r fig.height=5, echo = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram(fill = "salmon") +
+  theme(text = element_text(size=30))
+```
+
+---
+
+## Shape
+
+```{r fig.height = 4, fig.align='center', warning = FALSE, eval = FALSE, echo = TRUE}
+titanic_train %>% 
+  ggplot(aes(x = Age, y = Fare )) +
+  geom_point(shape = 4) 
+```
+
+```{r fig.height = 4, fig.align='center', warning = FALSE, echo = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Age, y = Fare )) +
+  geom_point(shape = 4) +
+  theme(text = element_text(size=30))
+```
 ---
 
 class: center, inverse
@@ -114,6 +202,18 @@ class: center, inverse
 [bit.ly/shapes-r](bit.ly/shapes-r)
 
 ---
+
+## Stacked bar plot
+
+Can you guess where the fill argument will go for this stacked bar plot?
+
+```{r fig.height=5, fig.align='center', echo = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Pclass, fill = Survived)) +
+  geom_bar() +
+  theme(text = element_text(size=30))
+```
+
 
 
 

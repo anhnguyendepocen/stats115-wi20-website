@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Balance and Sequentiality in Bayesian Analysis</title>
+    <title>Data visualization review</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Dogucu" />
     <meta name="date" content="2020-01-22" />
@@ -11,7 +11,7 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Balance and Sequentiality in Bayesian Analysis
+# Data visualization review
 ### Dr. Dogucu
 ### 2020-01-22
 
@@ -29,12 +29,6 @@ layout: true
 
 
 
-
-
-
-
----
-
 ## Review
 
 Which R functions do you recall from last discussion?
@@ -45,24 +39,19 @@ What is the shortcut for `%&gt;%`?
 
 ## Data 
 
-We will be using ???
+We will be using `titanic_train` dataset from the `titanic` dataset. 
+
+Glimpse at the data. Does everything look like it should?
 
 ---
 
-
-
-
----
-
-
-
----
 
 ## Who uses ggplot? Some examples
 
 [BBC](https://bbc.github.io/rcookbook/)  
 
 [FiveThirtyEight](https://fivethirtyeight.com/features/the-rise-of-religiously-inspired-terrorism-in-france/)  
+
 [Master List](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html#Histogram)  
 
 ---
@@ -85,9 +74,94 @@ For every plot,
 2) Decide which variable is on which axes.  
 3) Decide what kind of plot it is.  
 
+---
+
+
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+&lt;img src="slide-3d-viz-data_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /&gt;
+
+Why are we getting this warning? 
+
+
+---
+
+&lt;img src="slide-3d-viz-data_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+  
+What step of the code is binwidth related to?
+  
+---
+
+## Cheatsheet
+
+Look at the ggplot cheatsheet. Moving on you will attempt at making the plot by finding the geom object from your cheatsheet.
+---
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="slide-3d-viz-data_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+## You Attempt This First
+
+Make a plot that shows the relationship between age of the passenger and the fare that they paid. Comment whether older passengers bought more expensive tickets.
+
+---
+
+&lt;img src="slide-3d-viz-data_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Color 
+
+
+```r
+titanic_train %&gt;% 
+  ggplot(aes(x = Fare )) + 
+  geom_histogram(color = "salmon") 
+```
+
+
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+![](slide-3d-viz-data_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
 
 
 
+---
+
+## Fill 
+
+
+```r
+titanic_train %&gt;% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram(fill = "salmon") 
+```
+
+
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+![](slide-3d-viz-data_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+---
+
+## Shape
+
+
+```r
+titanic_train %&gt;% 
+  ggplot(aes(x = Age, y = Fare )) +
+  geom_point(shape = 4) 
+```
+
+&lt;img src="slide-3d-viz-data_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /&gt;
 ---
 
 class: center, inverse
@@ -112,6 +186,12 @@ class: center, inverse
 [bit.ly/shapes-r](bit.ly/shapes-r)
 
 ---
+
+## Stacked bar plot
+
+Can you guess where the fill argument will go for this stacked bar plot?
+
+&lt;img src="slide-3d-viz-data_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
