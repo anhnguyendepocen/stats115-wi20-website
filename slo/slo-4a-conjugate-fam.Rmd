@@ -1,5 +1,5 @@
 ---
-title: "Conjugate Family"
+title: "Conjugate Family Part I"
 date: "2020-01-25"
 output: 
   html_document:
@@ -13,7 +13,7 @@ output:
 By the end of this lecture, you will be able to:
 
 - find posterior distributions by identifying kernels and utilizing proportionality. 
-- use Gamma-Poisson and Normal-Normal models.
+- use Gamma-Poisson models.
 
 <br>
 <br>
