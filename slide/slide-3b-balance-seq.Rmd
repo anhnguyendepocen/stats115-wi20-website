@@ -90,9 +90,9 @@ make_plot_data <- function(as, bs, xs, ns, labs_prior, labs_likelihood){
 }
 plot_dat <- make_plot_data(
   as = c(5,1,14), bs = c(11,1,1), 
-  xs = c(9,27,197), ns = c(20,60,438), 
+  xs = c(6,29,46), ns = c(13,63,99), 
   labs_prior = c("prior: Beta(5,11)", "prior: Beta(1,1)", "prior: Beta(14,1)"), 
-  labs_likelihood = c("data: X = 9 of n = 20", "data: X = 27 of n = 60", "data: X = 197 of n = 438"))
+  labs_likelihood = c("data: X = 6 of n = 13", "data: X = 29 of n = 63", "data: X = 46 of n = 99"))
 ```
 
 

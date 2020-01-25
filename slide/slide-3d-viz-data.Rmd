@@ -38,7 +38,7 @@ What is the shortcut for `%>%`?
 
 ## Data 
 
-We will be using `titanic_train` dataset from the `titanic` dataset. 
+We will be using `titanic_train` dataset from the `titanic` package. 
 
 Glimpse at the data. Does everything look like it should?
 
@@ -187,7 +187,7 @@ class: center, inverse
 <br>
 <br>
 
-[bit.ly/colors-r](bit.ly/colors-r)
+[bit.ly/colors-r](http:/bit.ly/colors-r)
 
 ---
 
@@ -199,7 +199,7 @@ class: center, inverse
 <br>
 <br>
 
-[bit.ly/shapes-r](bit.ly/shapes-r)
+[bit.ly/shapes-r](http:/bit.ly/shapes-r)
 
 ---
 
