@@ -1,6 +1,6 @@
 ---
 title: "Conjugate Family Part I"
-date: "2020-01-25"
+date: "2020-01-27"
 output: 
   html_document:
     css: slo-styles.css 

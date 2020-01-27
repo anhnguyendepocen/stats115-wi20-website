@@ -1,0 +1,136 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+```{r echo = FALSE, message = FALSE}
+library(tidyverse)
+library(bayesrules)
+```
+
+\section{Choice of Prior}
+\vspace{10cm}
+
+\section{Conjugate Prior}
+
+Let $f(\theta)$ be a prior distribution for parmaeter $\theta$ from a particular distribution, and $L(\theta|x)$ be the likelihood function for the data conditional on parameter $\theta$, with its own particular distribution as the basis of the likelihood.
+If the resulting posterior distribution $f(\theta|x)$ is of the same family of distributions as the prior distribution, then the prior distribution is a conjugate prior for this likelihood 
+
+__Examples__
+
+\newpage
+
+\section{Non-conjugate prior for Binomial Data}
+
+$$f(\pi)=e-e^\pi\; \text{ for } \pi \in [0,1] $$
+
+Is this a valid pdf?
+
+
+\vspace{5cm}
+
+
+After observing 10 successes in 50 trials, calculate the posterior.
+
+\newpage
+\section{The Gamma-Poisson Conjugate Family}
+
+\vspace{7cm}
+
+\subsection{Gamma Prior}
+
+Let $\lambda$ be a random variable which can take any value between 0 and $\infty$, ie. $\lambda \in [0,\infty)$.  Then the variability in $\lambda$ might be well modeled by a Gamma model with __shape parameter__ $\alpha > 0$ and __rate parameter__ 
+$\beta > 0$: 
+
+$\lambda \sim \text{Gamma}(\alpha, \beta)$
+
+The Gamma distribution is specified by continuous pdf
+\large$f(\lambda) = \frac{\beta^\alpha}{\Gamma(\alpha)} \lambda^{\alpha-1} e^{-\beta\lambda} \;\; \text{ for } \lambda \in [0,\infty)$
+
+
+_Exercise_
+
+What is the y-coordinate of the blue point in the plot below? In other words what is $f(\lambda)$ if $\lambda =1$?
+
+```{r eval = FALSE}
+plot_gamma(shape = 2, rate = 5)
+```
+
+```{r echo = FALSE, fig.align='center', fig.width=4, fig.height=3}
+plot_gamma(2,5) +
+    geom_point(aes(x = 1, y = dgamma(1, 
+                                     shape =2, 
+                                     rate =5)), colour="blue") +
+  geom_text(aes(label= "(1, ?)", x = 1.25, y = 0.25), 
+            color = "blue")
+```
+
+
+\newpage
+__Descriptives of Gamma__
+
+$E(\lambda) = \frac{\alpha}{\beta}$
+
+$\text{Mode}(\lambda) = \frac{\alpha - 1}{\beta} \text{ where } \alpha\ge1$ 
+
+$\text{Var}(\lambda) = \frac{\alpha}{\beta^2}$
+
+__Gamma Tuning__
+
+```{r echo=FALSE, gamma-tuning, fig.width = 4, fig.height = 3, message = FALSE, fig.align='center'}
+# Set up gamma data
+alpha <- c(2,2,2,   3,3,3,   5,5,5)
+beta  <- c(2,4,6,   2,4,6,  2,4,6)
+gammas <- data.frame(setting = factor(rep(1:9, each = 500)), 
+                    x = rep(seq(0, 3, length = 500), 9),
+                    alpha = rep(alpha, each = 500), beta = rep(beta, each = 500))
+gammas <- gammas %>% 
+    mutate(y = dgamma(x, shape = alpha, rate = beta))
+levels(gammas$setting) <- paste0("Gamma(",alpha,",",beta,")")
+
+  
+g <- ggplot(gammas, aes(x = x, y = y)) + 
+  lims(x = c(0,1), y = c(0,2.5)) + 
+  geom_line() + 
+  facet_wrap(~ setting) + 
+  labs(x = expression(lambda), y = expression(paste("f(",lambda,")"))) +   scale_x_continuous(breaks = c(0,1,2,3), labels = c("0","1","2","3"))
+
+g
+``` 
+
+__Tuning Gamma example__
+
+For our example on spam phone calls, set a prior for $\lambda$ such that $E(\lambda) = 3$ and $\lambda$ most likely is between 2 and 4. You can use `plot_gamma()` function to try out different gamma distributions.
+
+\vspace{5cm}
+
+\newpage
+\subsection{Poisson Likelihood}
+
+__The Poisson Model__
+Let random variable $X$ be the _number of events_ that occur in a fixed amount of time, where $\lambda$ is the rate at which these events occur.  Then the _dependence_ of $X$ on $\lambda$ can be modeled by the Poisson model with __parameter__ $\lambda$.  In mathematical notation:
+ 
+$X | \lambda \sim \text{Pois}(\lambda)$
+
+Correspondingly, the Poisson model is specified by a conditional pmf:    
+
+$f(x|\lambda) =  \frac{e^{-\lambda}\lambda^x}{x!}\;\; \text{ for } x \in \{0,1,2,\ldots,n\}$
+
+where $f(x|\lambda)$ sums to one across $x$:
+
+$\sum_{x=0}^\infty f(x|\lambda) = 1$
+
+__Likelihood__
+
+\vspace{15cm}
+
+\newpage
+\subsection{Gamma-Poisson Conjugacy}
+
+If $f(\lambda) \sim  \text{Gamma}(\alpha, \beta)$   
+
+and if $x_i \sim iid \text{ Poissson}(\lambda) \text{for } i \in 1,\ldots ,n$ 
+
+then $f(\lambda|\vec{x}) \sim \text{Gamma}(\alpha+ \sum x_i, \beta+n)$.
+
