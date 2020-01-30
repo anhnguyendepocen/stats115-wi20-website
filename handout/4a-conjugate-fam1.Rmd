@@ -14,8 +14,8 @@ library(bayesrules)
 
 \section{Conjugate Prior}
 
-Let $f(\theta)$ be a prior distribution for parmaeter $\theta$ from a particular distribution, and $L(\theta|x)$ be the likelihood function for the data conditional on parameter $\theta$, with its own particular distribution as the basis of the likelihood.
-If the resulting posterior distribution $f(\theta|x)$ is of the same family of distributions as the prior distribution, then the prior distribution is a conjugate prior for this likelihood 
+Let $f(\theta)$ be a prior distribution for parmaeter $\theta$ from a particular distribution, and $L(\theta|x)$ be the likelihood function.
+If the resulting posterior distribution $f(\theta|x)$ is of the same family of distributions as the prior distribution, then the prior distribution is a conjugate prior for this likelihood.
 
 __Examples__
 
