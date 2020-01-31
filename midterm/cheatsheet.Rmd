@@ -3,7 +3,7 @@ output:
   pdf_document:
     template: template.tex
 ---
-Midterm
+Midterm Cheatsheet
 
 \textbf{Bayes' Rule for Events}
 
@@ -36,10 +36,34 @@ $\text{Mode}(\pi) = \frac{\alpha - 1}{\alpha + \beta - 2}$
 
 $\text{Var}(\pi) = \frac{\alpha \beta}{(\alpha + \beta)^2(\alpha + \beta + 1)}$
 
+
 \textbf{The Beta-Binomial Model}
 
 Let $\pi \sim \text{Beta}(\alpha, \beta)$ and $X|n \sim \text{Bin}(n,\pi)$ then
 
 $\pi|(X=x) \sim \text{Beta}(\alpha+x, \beta+n-x)$
 
+
+\newpage
+
+\textbf{Gamma Descriptives}
+
+
+$E(\lambda) = \frac{\alpha}{\beta}$
+
+$\text{Mode}(\lambda) = \frac{\alpha - 1}{\beta} \text{ where } \alpha\ge1$ 
+
+$\text{Var}(\lambda) = \frac{\alpha}{\beta^2}$
+
+\textbf{Poisson Likelihood}
+$f(x|\lambda) =  \frac{e^{-\lambda}\lambda^x}{x!}\;\; \text{ for } x \in \{0,1,2,\ldots,n\}$
+
+
+\textbf{The Gamma-Poisson Model}
+
+If $f(\lambda) \sim \text{Gamma}(\alpha, \beta)$   
+
+and if $x_i \sim iid \text{Poissson}(\lambda) \text{for } i \in 1,\ldots ,n$ 
+
+then $f(\lambda|\vec{x}) \sim \text{Gamma}(\alpha+ \sum x_i, \beta+n)$.
 
