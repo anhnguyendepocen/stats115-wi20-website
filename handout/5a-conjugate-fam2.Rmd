@@ -20,7 +20,7 @@ We are interested in $\theta$ the volume of the hippocampus of American football
 
 \subsection{Normal Prior}
 
-Let $\theta$ be a random variable which can take any value between $-\infty$ and $\infty$, ie. $\theta \in (-\infty),\infty)$.  
+Let $\theta$ be a random variable which can take any value between $-\infty$ and $\infty$, ie. $\theta \in (-\infty,\infty)$.  
 Then the variability in $\theta$ might be well modeled by a Normal model with __mean parameter__ $\mu$ and _standard deviation parameter_ $\tau > 0$: 
 
 $$\theta \sim \text{Normal}(\mu, \tau)$$
@@ -47,7 +47,7 @@ Data for 50 American football players shows that the average hippocampus volume 
 
 Exercise
 
-Prof. Abebe recently finished his graduate school and is teaching his first statistics class. His collegaues told him that final exams are usually normally distributed with a mean of 80 and a variance of 4. Prof. Abebe conducts the final exam and observes that his students had an average score of 92 and he knows that the variance not for his students but for all such exams is 9 (Wow Prof. Abebe really knows a lot!). Find the posterior mean and variance.
+Prof. Abebe recently finished his graduate school and is teaching his first statistics class. His collegaues told him that final exams are usually normally distributed with a mean of 80 and a variance of 4. Prof. Abebe conducts the final exam and observes that his students ($n = 10$) had an average score of 92 and he knows that the variance not for his students but for all such exams is 9 (Wow Prof. Abebe really knows a lot!). Find the posterior mean and variance.
 
 \newpage 
 \section{More on Data Order Invariance}
