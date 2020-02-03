@@ -1,0 +1,53 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+\section{Normal-Normal Model with known variance}
+
+\subsection{Background}
+
+What is hippocampus?
+
+\vspace{2cm}
+
+Why do we care about hippocampus of American football players? [A book on the topic](https://uncpress.org/book/9781469653709/no-game-for-boys-to-play/)
+
+\vspace{2cm}
+
+We are interested in $\theta$ the volume of the hippocampus of American football players.
+
+
+\subsection{Normal Prior}
+
+Let $\theta$ be a random variable which can take any value between $-\infty$ and $\infty$, ie. $\theta \in (-\infty),\infty)$.  
+Then the variability in $\theta$ might be well modeled by a Normal model with __mean parameter__ $\mu$ and _standard deviation parameter_ $\tau > 0$: 
+
+$$\theta \sim \text{Normal}(\mu, \tau)$$
+The Normal model is specified by continuous pdf
+
+$$f(\theta) = \frac{1}{\sqrt{2\pi\tau^2}} \exp\{-\frac{1}{2}(\frac{\theta-\mu}{\tau})^2\}$$
+
+According to Wikipedia the volume of hippocampus is about 3.0 to 3.5 $cm^3$^[https://en.wikipedia.org/wiki/Hippocampus#Other_animals] 
+
+\vspace{3cm}
+
+\newpage
+
+\subsection {Normal Likelihood}
+
+$$X \sim \text{Normal}(\theta,\sigma^2)$$
+
+Data for 50 American football players shows that the average hippocampus volume is 3.02 $cm^3$. We will assume that $\sigma$ is 0.4.
+
+\newpage 
+\subsection {Normal-Normal Conjugacy}
+
+\newpage
+
+Exercise
+
+Prof. Abebe recently finished his graduate school and is teaching his first statistics class. His collegaues told him that final exams are usually normally distributed with a mean of 80 and a variance of 4. Prof. Abebe conducts the final exam and observes that his students had an average score of 92 and he knows that the variance not for his students but for all such exams is 9 (Wow Prof. Abebe really knows a lot!). Find the posterior mean and variance.
+
+\newpage 
+\section{More on Data Order Invariance}
