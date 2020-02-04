@@ -9,7 +9,7 @@ output:
 
 Take home part of the midterm is [here](https://canvas.eee.uci.edu/courses/22992/files/folder/others?preview=8364454). This part is due Feb 7th at 5 pm. You will work individually on this part of the midterm. 
 
-The in class part of the midterm will be in class during regular time and at regular location on Feb 10th. This exam will be closed book but you will be given a cheatsheet. This is the [cheatsheet](cheatsheet.pdf). You can also read the [policies](policies.pdf) for the in class exam.
+The in class part of the midterm will be in class during regular time and at regular location on Feb 10th. This exam will be closed book but you will be given a cheatsheet. This is the [cheatsheet](cheatsheet.pdf). You can also read the [policies](policies.pdf) for the in class exam. You can find the mock midterm [here](https://canvas.eee.uci.edu/courses/22992/files/folder/others?preview=8392149).
 
 Note that the take home and the in class parts of the midterm are equally weighted.
 
