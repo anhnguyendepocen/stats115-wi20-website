@@ -1,6 +1,6 @@
 ---
-title: "Conjugate Family Part II"
-date: "2020-02-03"
+title: "Approximating the Posterior: Part I"
+date: "2020-02-05"
 output: 
   html_document:
     css: slo-styles.css 
@@ -12,7 +12,8 @@ output:
 
 By the end of this lecture, you will be able to:
 
-- use Normal-Normal model.
+- use grid approximation to approximate the posterior. 
+- write stan code for Beta-Binomial model in R.
 
 <br>
 <br>

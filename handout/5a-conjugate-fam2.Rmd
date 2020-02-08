@@ -23,7 +23,7 @@ We are interested in $\theta$ the volume of the hippocampus of American football
 Let $\theta$ be a random variable which can take any value between $-\infty$ and $\infty$, ie. $\theta \in (-\infty,\infty)$.  
 Then the variability in $\theta$ might be well modeled by a Normal model with __mean parameter__ $\mu$ and _standard deviation parameter_ $\tau > 0$: 
 
-$$\theta \sim \text{Normal}(\mu, \tau)$$
+$$\theta \sim \text{Normal}(\mu, \tau^2)$$
 The Normal model is specified by continuous pdf
 
 $$f(\theta) = \frac{1}{\sqrt{2\pi\tau^2}} \exp\{-\frac{1}{2}(\frac{\theta-\mu}{\tau})^2\}$$
