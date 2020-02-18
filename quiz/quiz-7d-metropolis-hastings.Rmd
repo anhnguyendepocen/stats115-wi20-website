@@ -1,0 +1,29 @@
+---
+title: "Quiz 7d: Metropolis-Hastings Algorithm"
+date: "due 2020-02-19 at 11:59 pm"
+output: 
+  html_document:
+    css: quiz-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Task
+
+Write a Metropolis Hastings algorithm for a single chain to approximate for Beta(12,9) prior and observed data of 10 successes in 13 trials. The proposals in the algorithm should come from a random normal distribution. Anything that is not specified here means that it is up to you to decide (e.g. standard deviation of the normal distribution, number of iterations etc.). Your final work should be a pdf document that shows
+
+- All of R code to reproduce your work. The code should adhere to tidyverse style guide.
+- traceplot of approximations.
+- approximate posterior distribution (with histogram) with exact posterior distribution (calculate the exact Beta posterior and impose it on the histogram).
+
+
+
+
+
+## Submission
+
+This homework is completed and submitted on Gradescope. Formatting is not important. Each group should have only one submission. The person who is submitting needs to make sure to list the names of all group members on Gradescope.
+
+<br>
+<br>
+<br>

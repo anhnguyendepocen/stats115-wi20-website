@@ -1,0 +1,104 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+__Question__
+
+Let $\pi$ denote the proportion of works in major U.S. art museums that are done by white men. Randomly selecting 100 work from the collection of 18 major US art museums from a study conducted by Topaz et. al (2019) showed that of the 100 art works 76 were done by white men. 
+
+\section{Review of Frequentist Inference}
+
+Using the frequentist approach test hypothesis that the proportion of art works represented at U.S. museum that are done by white male artists is greater than 0.7.  
+
+
+
+\newpage
+\section{Posterior Hypothesis Testing}
+
+Assuming that you start with a prior for Beta as $\pi \sim \text{Beta}(4,4)$. Calculate the posterior. We will use this posterior distribution to test the same hypothesis that we have tested using the frequentist approach. 
+
+\newpage
+.
+\vspace{5cm}
+
+\subsection{Bayes' Factor}
+In a hypothesis test of two competing hypotheses, $H_a$ vs $H_0$, the Bayes' Factor is an odds ratio for $H_a$:
+ 
+$$\text{Bayes' Factor}
+= \frac{\text{Posterior odds}}{\text{Prior odds}}
+= \frac{P(H_a | X) / P(H_0 | X)}{P(H_a) / P(H_0)}
+ \; .$$
+
+ As a ratio, it's meaningful to compare the Bayes' Factor (BF) to 1.  To this end, consider three possible scenarios:
+
+ 1. BF = 1:  The plausibility of $H_a$ _didn't change_ in light of the observed data.
+ 2. BF > 1:  The plausibility of $H_a$ _increased_ in light of the observed data.  Thus the greater the Bayes' Factor, the more convincing the evidence for $H_a$.
+ 3. BF < 1:  The plausibility of $H_a$ _decreased_ in light of the observed data.      
+
+\subsection{Posterior Credible Intervals}
+
+
+
+\newpage
+\section{Posterior prediction}
+
+\newpage
+
+```{r fig.height = 2, fig.width = 6, echo = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(gridExtra)
+
+# Data
+x <- 76
+n <- 100
+# Prior parameters
+prior_a <- 4
+prior_b <- 4
+# Posterior parameters
+post_a <- prior_a + x
+post_b <- prior_b + n - x
+# Posterior trend
+post_mean_unrounded <- round(post_a / (post_a + post_b),3)
+post_mean <- round(post_mean_unrounded, 2)
+post_mode <- round((post_a - 1) / (post_a + post_b - 2), 2)
+# 95% CI
+qs <- qbeta(c(0.025, 0.975), post_a, post_b)
+lower_95 <- round(qs[1],2)
+upper_95 <- round(qs[2],2)
+# 99% CI
+qs <- qbeta(c(0.005, 0.995), post_a, post_b)
+lower_99 <- round(qs[1],2)
+upper_99 <- round(qs[2],2)
+# Probabilities
+post_prob <- pbeta(0.7, 80, 28, lower = FALSE)
+prior_prob <- pbeta(0.7, 4, 4, lower = FALSE)
+
+binom_plot <- function(pi_val){
+  pred_plot <- data.frame(x = 0:20, y = dbinom(0:20, size = 20, prob = pi_val)*dbeta(pi_val,post_a, post_b))
+  ggplot(pred_plot, aes(x = x, y = y)) + 
+    geom_point(size = 0.7) + 
+    geom_segment(aes(x = x, xend = x, y = 0, yend = y), size = 0.1) + 
+    lims(y = c(0,2)) + 
+    labs(x = "x'", title = substitute(paste(pi, " = ", nn), list(nn = pi_val)), y = expression(paste("f(x'|", pi, ")", "f(", pi, "|(x = 76))")))
+}
+g1 <- binom_plot(pi_val = lower_95) 
+g2 <- binom_plot(pi_val = post_mode)
+g3 <- binom_plot(pi_val = upper_95)
+grid.arrange(g1, g2, g3, ncol=3)
+```
+
+\vspace{5cm}
+
+```{r  fig.height = 2, fig.width = 6,echo = FALSE}
+pred_pdf <- Vectorize(function(x){choose(20,x)*gamma(108)/gamma(80)/gamma(28)*gamma(80+x)*gamma(48-x) /gamma(128)})
+# Confirm it's valid
+#sum(pred_pdf(x = 0:20))
+plot_pred <- data.frame(x = 0:20, y = pred_pdf(0:20))
+ggplot(plot_pred, aes(x = x, y = y)) + 
+  geom_point(size = 0.7) + 
+  geom_segment(aes(x = x, xend = x, y = 0, yend = y), size = 0.25) + 
+  labs(x = "x'", y = "f(x' | (x = 76))")
+```
+

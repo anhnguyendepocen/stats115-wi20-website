@@ -12,7 +12,7 @@ output:
 
 By the end of this lecture, you will be able to:
 
-- write Metropolis-Hastings algorithm to approximate the posterior
+- write Metropolis-Hastings algorithm to approximate the posterior for Gamma-Poisson model
 - visualize Markov Chain results.
 
 <br>

@@ -1,0 +1,21 @@
+---
+title: "Posterior Inference and Prediction"
+date: "2020-02-19"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this discussion, you will be able to:
+
+- compare hypothesis testing from Bayesian and frequentist perspectives.
+- construct credible intervals.
+- use posterior distribution for prediction.
+
+<br>
+<br>
+<br>
