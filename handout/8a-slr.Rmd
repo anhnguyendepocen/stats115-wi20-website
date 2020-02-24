@@ -1,0 +1,29 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+\section{Simple Linear Regression}
+
+\subsection{Question of the Day}
+\vspace{5cm}
+
+\subsection{The Model}
+$$\begin{split}
+f(\beta_0,\beta_1,\sigma \; | \; y) 
+ & = \frac{\text{prior} \cdot \text{likelihood}}{ \int \text{prior} \cdot \text{likelihood}} \\
+ & = \frac{f(\beta_0) f(\beta_1) f(\sigma) \cdot \left[\prod_{i=1}^{n}L(\beta_0, \beta_1, \sigma | y_i) \right]}
+ {\int\int\int f(\beta_0) f(\beta_1) f(\sigma) \cdot \left[\prod_{i=1}^{n}L(\beta_0, \beta_1, \sigma | y_i) \right] d\beta_0 d\beta_1 d\sigma} \\
+ \end{split}$$
+
+\newpage
+
+\subsection{Posterior Prediction}
+Steps
+
+1. Calculate the regression trend.
+2. Sample from Normal Likelihood model centered at this trend with standard deviation $\sigma^{(i)}$.
+
+\vspace{10cm}
+
+__How good is the posterior predictive model?__
