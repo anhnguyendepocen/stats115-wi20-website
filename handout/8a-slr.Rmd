@@ -3,7 +3,7 @@ output:
   pdf_document:
     template: template.tex
 ---
-\section{Simple Linear Regression}
+\section{Simple Normal Regression}
 
 \subsection{Question of the Day}
 \vspace{5cm}
@@ -24,6 +24,5 @@ Steps
 1. Calculate the regression trend.
 2. Sample from Normal Likelihood model centered at this trend with standard deviation $\sigma^{(i)}$.
 
-\vspace{10cm}
 
 __How good is the posterior predictive model?__
