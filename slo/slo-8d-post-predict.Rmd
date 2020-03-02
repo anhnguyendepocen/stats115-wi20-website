@@ -1,0 +1,20 @@
+---
+title: "Multiple Normal Regression Evaluation"
+date: "2020-02-26"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this discussion, you will be able to:
+
+- you will be able to fit multiple linear regression models using rstan and rstanarm.
+- evaluate the posterior model quality using rstanarm and bayesrules functions. 
+
+<br>
+<br>
+<br>
