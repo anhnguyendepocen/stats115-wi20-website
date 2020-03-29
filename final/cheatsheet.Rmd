@@ -1,0 +1,99 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+Final Cheatsheet
+
+\textbf{Bayes' Rule for Events}
+
+\large$P(B |A) = \frac{P(A \cap B)}{P(A)} = \frac{P(A|B)P(B)}{P(A)}$
+
+where, by the Law of Total Probability,     
+
+$P(A) = P(A|B)P(B) + P(A|B^c)P(B^c)$
+
+\textbf{Posterior Model}
+
+\large$f(\pi|x) = \frac{f(\pi)L(\pi|x)}{f(x)} \propto f(\pi)L(\pi|x)$
+
+\textbf{Beta Model}
+
+$\pi \sim \text{Beta} (\alpha, \beta)$
+
+The Beta model is specified by continuous pdf
+
+$f(\pi) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \pi^{\alpha-1} (1-\pi)^{\beta-1} \;\; \text{ for } \pi \in [0,1], \alpha >0, \text{and } \beta>0$
+
+ where $\Gamma(z) = \int_0^\infty x^{z-1}e^{-x}dx$ and $\Gamma(z + 1) = z \Gamma(z)$.  Fun fact: when $z$ is a positive integer, then $\Gamma(z)$ simplifies to $\Gamma(z) = (z-1)!$.   
+ 
+ 
+\textbf{Beta Descriptives}
+ 
+ $E(\pi) = \frac{\alpha}{\alpha + \beta}$
+
+$\text{Mode}(\pi) = \frac{\alpha - 1}{\alpha + \beta - 2}$  
+
+$\text{Var}(\pi) = \frac{\alpha \beta}{(\alpha + \beta)^2(\alpha + \beta + 1)}$
+
+
+\textbf{The Beta-Binomial Model}
+
+Let $\pi \sim \text{Beta}(\alpha, \beta)$ and $X|n \sim \text{Bin}(n,\pi)$ then
+
+$\pi|(X=x) \sim \text{Beta}(\alpha+x, \beta+n-x)$
+
+
+\newpage
+
+\textbf{Gamma Prior}
+
+
+
+$\lambda \sim \text{Gamma}(\alpha, \beta)$  where $\alpha > 0$ and
+$\beta > 0$: 
+
+The Gamma distribution is specified by continuous pdf
+\large$f(\lambda) = \frac{\beta^\alpha}{\Gamma(\alpha)} \lambda^{\alpha-1} e^{-\beta\lambda} \;\; \text{ for } \lambda \in [0,\infty)$
+
+\textbf{Gamma Descriptives}
+
+
+$E(\lambda) = \frac{\alpha}{\beta}$
+
+$\text{Mode}(\lambda) = \frac{\alpha - 1}{\beta} \text{ where } \alpha\ge1$ 
+
+$\text{Var}(\lambda) = \frac{\alpha}{\beta^2}$
+
+\textbf{Poisson Likelihood}
+
+$f(x|\lambda) =  \frac{e^{-\lambda}\lambda^x}{x!}\;\; \text{ for } x \in \{0,1,2,\ldots,n\}$
+
+
+\textbf{The Gamma-Poisson Model}
+
+If $f(\lambda) \sim \text{Gamma}(\alpha, \beta)$   
+
+and if $x_i \sim iid \text{ Poissson}(\lambda) \text{for } i \in 1,\ldots ,n$ 
+
+then $f(\lambda|\vec{x}) \sim \text{Gamma}(\alpha+ \sum x_i, \beta+n)$.
+
+\textbf{Normal Prior}
+
+If $\theta \sim \text{Normal} (\mu, \tau ^2)$ then
+
+$f(\theta) = \frac{1}{\sqrt{2\pi\tau^2}} \exp\{-\frac{1}{2}(\frac{\theta-\mu}{\tau})^2\}$
+
+\textbf{Normal Likelihood}
+
+If $X \sim \text{Normal}(\theta, \sigma^2)$
+
+$L(\theta|\vec x) \propto \exp\{ -\frac{1}{2} (\frac{\bar x - \theta}{\sigma /\sqrt{n}})^2\}$
+
+\textbf{The Normal Posterior}
+
+\large$\theta|\vec x \sim \text{Normal}(\frac{\sigma^2\mu+\tau^2n\bar x}{n\tau^2+\sigma^2}, \frac{\sigma^2\tau^2}{n\tau^2+\sigma^2})$
+
+\textbf{Mean Square Error of an Estimator}
+
+\large$MSE_{\hat\theta} = (E(\hat\theta)-\theta)^2 + Var(\hat\theta)$

@@ -1,0 +1,48 @@
+---
+title: "Final"
+output: 
+  html_document:
+    css: final-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Type
+
+Group work
+
+## Dataset
+
+You can use any dataset that you prefer. We have seen the Bayesian methods are powerful especially under two conditions 1) when the sample size is small 2) when we have informative priors. Thus, it would be ideal for you to choose a dataset that would meet these two conditions. Even if you cannot meet these conditions, acknowledging them is important. Do not force yourself to come up with informative priors. Weakly informative priors would be fine as well. Avoid using flat priors. 
+
+## Presentation
+
+In essence, you take-home final will be graded on three aspects 
+
+1. Correct use of Bayesian methods (50%) 
+2. Connection of theory to applications (30%) 
+3. Well documented and presented (20%)
+
+Your presentation should not have any boundaries(other than 6 minute time limit). As soon as I provide guidelines students tend to use it as a checklist. So the guide below does not have to be your checklist. Present however you want to present to get us interested in your topic and show us you are true Bayesians and great data scientist. 
+
+- __Introduction__ to the topic, why should we care about the topic?
+- __Background__ who has done what to answer the question of interest? Where did you get the dataset? Characteristics of the data.
+- __Analysis__ steps: models you fit and considered. What prior did you use and why? 
+- __Results and discussion__ Which model performed better? If you had predicitions, were the test values captured in prediction intervals. What do results mean for anyone who would be interested in the topic? 
+
+## Submission 
+
+Submissions are due __March 11 at 8:30 am.__ on Gradescope in pdf format.  
+
+The submission should include a pdf document showing your presentation. If you choose to do animations and use other features not available on pdf, you may email me your presentation in PowerPoint format or in any other format that you are sure would work on a Windows machine. Even if you email me, you need to submit in pdf format on Gradescope. 
+
+The submission should be made by only one person in the group.
+
+## Help
+
+Feel free to reach out to me at any stage of the project. Note that I have office hours on Monday 1-2 pm. I will extend these office hours until 3 pm.
+
+
+<br>
+<br>
+<br>

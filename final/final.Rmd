@@ -1,0 +1,22 @@
+---
+title: "Final"
+output: 
+  html_document:
+    css: final-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+Instructions for the take-home group project part of the final is [here](take-home.html)
+
+The final exam is [here](https://canvas.eee.uci.edu/courses/22992/files/folder/others?preview=8835262) and it has instructions on the first page. Note that you should be working on the final exam on your own.
+
+Should you need a [cheatsheet](cheatsheet.pdf) it is provided. 
+
+ 
+Note that the group project and the exam are equally weighted.
+
+
+<br>
+<br>
+<br>
